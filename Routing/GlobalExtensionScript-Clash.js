@@ -192,6 +192,7 @@ const rules = [
   // 特别预留（公司内网等）
   "DOMAIN-SUFFIX,gs.com,全局直连",
   "DOMAIN,video.qq.com,全局直连",
+  "DOMAIN-KEYWORD,squad,全局直连",  //Squad直连
   
   // Loyalsoldier 规则集
   // 1、本地
@@ -338,7 +339,7 @@ function main(config) {
       ...groupBaseOption,
       "name": "哔哩哔哩港澳台",
       "type": "select",
-      "proxies": ["节点选择"],
+      "proxies": ["全局直连","节点选择"],
       "include-all": true,
       "filter": "^(?!.*(官网|套餐|流量|异常|剩余)).*$",
       "icon": "https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/icon/bilibili.svg"
