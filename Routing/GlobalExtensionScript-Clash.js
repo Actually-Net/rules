@@ -363,9 +363,9 @@ const rules = [
   "DOMAIN,v2rayse.com,节点选择", //  V2rayse节点工具
 
   //  内网直连
-  "IP-CIDR,10.0.0.0/8,全局直连",
-  "IP-CIDR,172.16.0.0/12,全局直连",
-  "IP-CIDR,192.168.0.0/16,全局直连",
+  "IP-CIDR,10.0.0.0/8,全局直连,no-resolve",
+  "IP-CIDR,172.16.0.0/12,全局直连,no-resolve",
+  "IP-CIDR,192.168.0.0/16,全局直连,no-resolve",
   
   //  特别预留（公司内网等）
   "DOMAIN-SUFFIX,gs.com,全局直连",
@@ -387,7 +387,7 @@ const rules = [
   "RULE-SET,BilibiliHMT,哔哩哔哩港澳台",
   //  4、服务类
   "RULE-SET,google,谷歌服务",
-  "RULE-SET,icloud,微软服务",
+  "RULE-SET,icloud,苹果服务",
   "RULE-SET,apple,苹果服务",
   "RULE-SET,telegramcidr,Telegram,no-resolve",
   //  5、代理类
