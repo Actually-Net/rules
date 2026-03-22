@@ -383,7 +383,6 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT
-      - 节点选择
     include-all: true
     interval: 300
     timeout: 3000
@@ -395,10 +394,9 @@ proxy-groups:
 
   - name: 代理游戏
     type: select
-    proxies:
-      - 节点选择
-      - 全局直连
     include-all: true
+    proxies:
+      - DIRECT
     interval: 300
     timeout: 3000
     url: https://www.google.com/generate_204
@@ -540,7 +538,7 @@ proxy-groups:
   - name: 哔哩哔哩港澳台
     type: select
     proxies:
-      - 全局直连
+      - DIRECT
       - 节点选择
     include-all: true
     filter: '^(?!.*(官网|套餐|流量|异常|剩余)).*$'
