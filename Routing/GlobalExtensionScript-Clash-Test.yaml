@@ -479,6 +479,7 @@ proxy-groups:
     hidden: false
     icon: https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/telegram.svg
 
+
   #  ###################################################################
   #  4、媒体组
   - name: YouTube
@@ -565,6 +566,7 @@ proxy-groups:
     hidden: false
     icon: https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/icon/spotify.svg
 
+
   #  ###################################################################
   #  5、兜底组
   - name: 漏网之鱼
@@ -605,6 +607,7 @@ rules:
   - DOMAIN,v2rayse.com,节点选择                  #  V2rayse 节点工具
   - RULE-SET,diydirect,全局直连                  #  补充直连
   - RULE-SET,diyproxy,节点选择                   #  补充代理
+  - RULE-SET,diyreject,全局拦截                  #  补充代理
   
 
   #  4、游戏
