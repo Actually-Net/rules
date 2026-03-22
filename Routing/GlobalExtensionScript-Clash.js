@@ -82,6 +82,7 @@ function main(config) {
 
   //  覆盖原配置中的代理组
   config["proxy-groups"] = [
+      //  1、基础组
     {
       ...groupBaseOption,
       "name": "节点选择",
@@ -90,6 +91,29 @@ function main(config) {
       "filter": "^(?!.*(官网|套餐|流量|异常|剩余)).*$",
       "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/adjust.svg"
     },
+    {
+      ...groupBaseOption,
+      "name": "全局直连",
+      "type": "select",
+      "proxies": ["DIRECT","节点选择"],
+      "include-all": true,
+      "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/link.svg"
+    },
+    {
+      ...groupBaseOption,
+      "name": "全局拦截",
+      "type": "select",
+      "proxies": ["REJECT", "DIRECT"],
+      "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/block.svg"
+    },
+    {
+      ...groupBaseOption,
+      "name": "广告过滤",
+      "type": "select",
+      "proxies": ["REJECT", "DIRECT"],
+      "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/bug.svg"
+    },
+      //  2、服务组
     {
       ...groupBaseOption,
       "name": "AI",
@@ -130,6 +154,7 @@ function main(config) {
       "include-all": true,
       "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/telegram.svg"
     },
+      //  3、媒体组
     {
       ...groupBaseOption,
       "name": "YouTube",
@@ -181,28 +206,7 @@ function main(config) {
       "include-all": true,
       "icon": "https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/icon/spotify.svg"
     },
-    {
-      ...groupBaseOption,
-      "name": "全局直连",
-      "type": "select",
-      "proxies": ["DIRECT","节点选择"],
-      "include-all": true,
-      "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/link.svg"
-    },
-    {
-      ...groupBaseOption,
-      "name": "全局拦截",
-      "type": "select",
-      "proxies": ["REJECT", "DIRECT"],
-      "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/block.svg"
-    },
-    {
-      ...groupBaseOption,
-      "name": "广告过滤",
-      "type": "select",
-      "proxies": ["REJECT", "DIRECT"],
-      "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/bug.svg"
-    },
+      //  4、兜底组
     {
       ...groupBaseOption,
       "name": "漏网之鱼",
