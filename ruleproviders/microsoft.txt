@@ -14,12 +14,9 @@ payload:
   - 'auth.gfx.ms'
 
   # Microsoft core / Office / M365 basic services
-  - '+.microsoft.com'
   - '+.office.com'
   - '+.office.net'
   - '+.office365.com'
-  - '+.live.com'
-  - '+.live.net'
   - '+.outlook.com'
   - 'outlook.live.com'
   - '+.sharepoint.com'
@@ -34,7 +31,6 @@ payload:
 
   # Windows / Update / Store / activation
   - '+.windows.com'
-  - '+.windows.net'
   - '+.windowsupdate.com'
   - '+.update.microsoft.com'
   - '+.delivery.mp.microsoft.com'
@@ -60,3 +56,7 @@ payload:
   - '+.e-msedge.net'
   - '+.s-msedge.net'
   - 'client-office365-tas.msedge.net'
+
+
+
+  # - ''

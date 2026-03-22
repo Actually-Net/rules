@@ -1,1 +1,37 @@
+payload:
+  # Blizzard / Battle.net / Diablo Immortal
+  - 'DOMAIN-SUFFIX,battle.net'
+  - 'DOMAIN-SUFFIX,battlenet.com'
+  - 'DOMAIN-SUFFIX,blizzard.com'
+  - 'DOMAIN-SUFFIX,blzstatic.com'
+  - 'DOMAIN-KEYWORD,diabloimmortal'
 
+  # Warframe / Digital Extremes
+  - 'DOMAIN-SUFFIX,warframe.com'
+  - 'DOMAIN-SUFFIX,digitalextremes.com'
+  - 'DOMAIN-KEYWORD,warframe'
+
+  # Riot Games / Valorant / League ecosystem
+  - 'DOMAIN-SUFFIX,riotgames.com'
+  - 'DOMAIN-SUFFIX,leagueoflegends.com'
+  - 'DOMAIN-SUFFIX,playvalorant.com'
+  - 'DOMAIN-KEYWORD,riot'
+  - 'DOMAIN-KEYWORD,valorant'
+
+  # Epic Games / Fortnite ecosystem
+  - 'DOMAIN-SUFFIX,epicgames.com'
+  - 'DOMAIN-SUFFIX,fortnite.com'
+  - 'DOMAIN-KEYWORD,epicgames'
+  - 'DOMAIN-KEYWORD,fortnite'
+
+  # Roblox
+  - 'DOMAIN-SUFFIX,roblox.com'
+  - 'DOMAIN-KEYWORD,roblox'
+
+  # Nintendo overseas services
+  - 'DOMAIN-SUFFIX,nintendo.com'
+  - 'DOMAIN-SUFFIX,nintendo.net'
+
+  # Supercell overseas services
+  - 'DOMAIN-SUFFIX,supercell.com'
+  - 'DOMAIN-KEYWORD,supercell'

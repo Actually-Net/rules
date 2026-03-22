@@ -1,1 +1,13 @@
+payload:
+  # Squad / EOS process rules
+  - 'PROCESS-NAME,EOSOverlayRenderer-Win64-Shipping.exe'
+  - 'PROCESS-NAME,SquadGame.exe'
 
+  # Steam / Valve direct domains
+  - 'DOMAIN-SUFFIX,steampowered.com'
+  - 'DOMAIN-SUFFIX,steamcommunity.com'
+  - 'DOMAIN-SUFFIX,steamstatic.com'
+  - 'DOMAIN-SUFFIX,steamcontent.com'
+  - 'DOMAIN-SUFFIX,steamusercontent.com'
+  - 'DOMAIN-SUFFIX,steamserver.net'
+  - 'DOMAIN-SUFFIX,steamgames.com'
