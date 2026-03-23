@@ -1,0 +1,149 @@
+payload:
+  # 腾讯视频 / WeTV
+  # Tencent Video / WeTV
+  - '+.v.qq.com'
+  - '+.video.qq.com'
+  - '+.film.qq.com'
+  - '+.qqvideo.tc.qq.com'
+  - '+.vfiles.gtimg.cn'
+
+  # 爱奇艺
+  # iQIYI
+  - '+.iqiyi.com'
+  - '+.iqiyipic.com'
+  - '+.qiyi.com'
+  - '+.qiyipic.com'
+  - '+.71.am'
+
+  # 优酷 / 土豆
+  # Youku / Tudou
+  - '+.youku.com'
+  - '+.ykimg.com'
+  - '+.tudou.com'
+
+  # 芒果 TV / 湖南系
+  # Mango TV / Hunan TV
+  - '+.mgtv.com'
+  - '+.mgytv.com'
+  - '+.hunantv.com'
+  - '+.hitv.com'
+  - '+.imgo.tv'
+
+  # 哔哩哔哩
+  # Bilibili
+  - '+.bilibili.com'
+  - '+.biliapi.com'
+  - '+.bilivideo.com'
+  - '+.hdslb.com'
+  - '+.biligame.com'
+
+  # 咪咕视频
+  # Migu Video
+  - '+.miguvideo.com'
+  - '+.migu.cn'
+
+  # 搜狐视频
+  # Sohu Video
+  - '+.sohu.com'
+  - '+.sohucs.com'
+  - '+.tv.sohu.com'
+
+  # 乐视
+  # LeTV
+  - '+.le.com'
+  - '+.letv.com'
+  - '+.letvimg.com'
+
+  # PPTV / PPLive
+  # PPTV / PPLive
+  - '+.pptv.com'
+  - '+.pplive.cn'
+
+  # 西瓜视频 / 抖音视频生态
+  # Xigua Video / ByteDance video ecosystem
+  - '+.ixigua.com'
+  - '+.ixiguavideo.com'
+  - '+.snssdk.com'
+  - '+.amemv.com'
+  - '+.douyin.com'
+  - '+.douyinvod.com'
+  - '+.douyinpic.com'
+  - '+.byteimg.com'
+  - '+.ibytedtos.com'
+
+  # AcFun
+  # AcFun
+  - '+.acfun.cn'
+  - '+.acfun.com'
+
+  # 风行
+  # Funshion / Fengxing
+  - '+.fun.tv'
+  - '+.funshion.com'
+
+  # 1905 / CCTV / 央视频
+  # 1905 / CCTV / Yangshipin
+  - '+.1905.com'
+  - '+.cctv.com'
+  - '+.cntv.cn'
+  - '+.yangshipin.cn'
+
+  # 网易云音乐
+  # NetEase Cloud Music
+  - 'music.163.com'
+  - 'interface.music.163.com'
+  - 'apm.music.163.com'
+  - '+.music.163.com'
+  - '+.126.net'
+
+  # QQ 音乐
+  # QQ Music
+  - 'y.qq.com'
+  - 'c.y.qq.com'
+  - 'u.y.qq.com'
+  - 'i.y.qq.com'
+  - '+.y.qq.com'
+  - '+.qqmusic.qq.com'
+  - 'streamoc.music.tc.qq.com'
+  - 'mobileoc.music.tc.qq.com'
+  - 'isure.stream.qqmusic.qq.com'
+  - 'dl.stream.qqmusic.qq.com'
+  - 'aqqmusic.tc.qq.com'
+  - 'amobile.music.tc.qq.com'
+
+  # 酷狗音乐
+  # Kugou Music
+  - '+.kugou.com'
+  - 'download.kugou.com'
+  - 'songsearch.kugou.com'
+  - 'trackercdn.kugou.com'
+  - 'mobilecdn.kugou.com'
+
+  # 酷我音乐
+  # Kuwo Music
+  - '+.kuwo.cn'
+  - '+.kuwo.com'
+  - 'antiserver.kuwo.cn'
+  - 'nmobi.kuwo.cn'
+
+  # 千千音乐 / 太合音乐
+  # Qianqian Music / Taihe Music
+  - 'musicapi.taihe.com'
+  - 'music.taihe.com'
+  - '+.taihe.com'
+
+  # 咪咕音乐
+  # Migu Music
+  - 'music.migu.cn'
+  - '+.music.migu.cn'
+  - 'd.musicapp.migu.cn'
+  - 'app.c.nf.migu.cn'
+
+  # JOOX 音乐
+  # JOOX Music
+  - 'api-jooxtt.sanook.com'
+  - 'api.joox.com'
+  - 'joox.com'
+
+  # 有意排除：纯海外流媒体服务
+  # Excluded on purpose: overseas-only media services

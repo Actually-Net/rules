@@ -1,10 +1,6 @@
 payload:
-  - 'video.qq.com'
-
   #  Samsung
   - 'policy.samsungcloud.com'
   - 'play.samsungcloudcn.com'
-
-
 
   # - ''

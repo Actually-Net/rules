@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">
+  <defs>
+    <linearGradient id="tvBody" x1="10" y1="10" x2="36" y2="36" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#d8c7a3"/>
+      <stop offset="1" stop-color="#b59667"/>
+    </linearGradient>
+    <linearGradient id="tvScreen" x1="14" y1="15" x2="30" y2="28" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4a5560"/>
+      <stop offset="1" stop-color="#232a31"/>
+    </linearGradient>
+    <linearGradient id="tvGlow" x1="16" y1="17" x2="28" y2="26" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8ee7ff" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#4fc3f7" stop-opacity="0.15"/>
+    </linearGradient>
+  </defs>
+  <path fill="#d65a4a" d="M17.5 8.1a1.4 1.4 0 0 1 2-.1l4.5 4.1a1.4 1.4 0 1 1-1.9 2l-4.5-4.1a1.4 1.4 0 0 1-.1-1.9Zm13-.1a1.4 1.4 0 0 1-.1 2l-4.5 4.1a1.4 1.4 0 1 1-1.9-2L28.5 8a1.4 1.4 0 0 1 2 .1Z"/>
+  <path fill="url(#tvBody)" d="M13.2 12.5h21.6c3 0 5.5 2.5 5.5 5.5v11.7c0 3-2.5 5.5-5.5 5.5H13.2c-3 0-5.5-2.5-5.5-5.5V18c0-3 2.5-5.5 5.5-5.5Z"/>
+  <path fill="#8c6b43" d="M20 35.5h8v2.3a1.6 1.6 0 0 1-1.6 1.6h-4.8a1.6 1.6 0 0 1-1.6-1.6v-2.3Z"/>
+  <path fill="#7a5b39" d="M14.5 38.3h18.9a1.5 1.5 0 1 1 0 3H14.5a1.5 1.5 0 1 1 0-3Z"/>
+  <rect x="12.2" y="16.5" width="18.8" height="12.5" rx="1.8" fill="url(#tvScreen)"/>
+  <path fill="url(#tvGlow)" d="M13.8 18.1h11.4c.8 0 1.4.6 1.4 1.4v2.8c0 .8-.6 1.4-1.4 1.4H13.8c-.8 0-1.4-.6-1.4-1.4v-2.8c0-.8.6-1.4 1.4-1.4Z"/>
+  <path fill="#5cc2ff" d="M16.2 31.5c.8-.9 2-1.5 3.3-1.5 1.1 0 2.1.4 2.9 1.1.7-.5 1.5-.8 2.4-.8 1.9 0 3.6 1.2 4.3 3H16.2v-1.8Z" opacity="0.9"/>
+  <circle cx="34.7" cy="20.1" r="1.5" fill="#d65a4a"/>
+  <circle cx="34.7" cy="24.5" r="1.5" fill="#7bd389"/>
+</svg>

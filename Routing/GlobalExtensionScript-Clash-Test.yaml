@@ -55,7 +55,6 @@ dns:
     #  本地主机/设备
     - '*.lan'
     - 'localhost'
-    - 'local'
     - '+.lan'
     - '+.local'
     #  Windows 网络出现小地球图标
@@ -105,6 +104,250 @@ dns:
 
 
 #  ============================================================================
+#  代理组配置
+#  ============================================================================
+proxy-groups:
+  #  1、基础组
+  - name: 节点选择
+    type: select
+    include-all: true
+    #  filter: '^(?!.*(官网|套餐|流量|异常|剩余)).*$'
+    interval: 300
+    timeout: 3000
+    url: https://www.google.com/generate_204
+    lazy: true
+    max-failed-times: 3
+    hidden: false
+    icon: https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/adjust.svg
+
+  - name: 全局直连
+    type: select
+    proxies:
+      - DIRECT
+    #  include-all: true
+    interval: 300
+    timeout: 3000
+    url: https://www.google.com/generate_204
+    lazy: true
+    max-failed-times: 3
+    hidden: false
+    icon: https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/link.svg
+
+  - name: 广告过滤
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+    interval: 300
+    timeout: 3000
+    url: https://www.google.com/generate_204
+    lazy: true
+    max-failed-times: 3
+    hidden: false
+    icon: https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/bug.svg
+
+
+  #  ###################################################################
+  #  2、娱乐组
+  - name: 直连游戏
+    type: select
+    proxies:
+      - DIRECT
+    #   include-all: true
+    interval: 300
+    timeout: 3000
+    url: https://www.google.com/generate_204
+    lazy: true
+    max-failed-times: 3
+    hidden: false
+    icon: https://fastly.jsdelivr.net/gh/Actually-Net/Rules@Rules/assets/icons/directgame.svg
+
+  - name: 代理游戏
+    type: select
+    proxies:
+      - '节点选择'
+    include-all: true
+    interval: 300
+    timeout: 3000
+    url: https://www.google.com/generate_204
+    lazy: true
+    max-failed-times: 3
+    hidden: false
+    icon: https://fastly.jsdelivr.net/gh/Actually-Net/Rules@Rules/assets/icons/proxygame.svg
+
+
+  #  ###################################################################
+  #  3、服务组
+  - name: AI
+    type: select
+    proxies:
+      - 节点选择
+    include-all: true
+    interval: 300
+    timeout: 3000
+    url: https://www.google.com/generate_204
+    lazy: true
+    max-failed-times: 3
+    hidden: false
+    icon: https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/chatgpt.svg
+
+  - name: 谷歌服务
+    type: select
+    proxies:
+      - 节点选择
+    include-all: true
+    interval: 300
+    timeout: 3000
+    url: https://www.google.com/generate_204
+    lazy: true
+    max-failed-times: 3
+    hidden: false
+    icon: https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/google.svg
+
+  - name: 微软服务
+    type: select
+    proxies:
+      - DIRECT
+      - 节点选择
+    include-all: true
+    interval: 300
+    timeout: 3000
+    url: https://www.google.com/generate_204
+    lazy: true
+    max-failed-times: 3
+    hidden: false
+    icon: https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/microsoft.svg
+
+  - name: 苹果服务
+    type: select
+    proxies:
+      - DIRECT
+      - 节点选择
+    include-all: true
+    interval: 300
+    timeout: 3000
+    url: https://www.google.com/generate_204
+    lazy: true
+    max-failed-times: 3
+    hidden: false
+    icon: https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/apple.svg
+
+  - name: Telegram
+    type: select
+    proxies:
+      - 节点选择
+    include-all: true
+    interval: 300
+    timeout: 3000
+    url: https://www.google.com/generate_204
+    lazy: true
+    max-failed-times: 3
+    hidden: false
+    icon: https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/telegram.svg
+
+
+  #  ###################################################################
+  #  4、媒体组
+  - name: YouTube
+    type: select
+    proxies:
+      - 节点选择
+    include-all: true
+    interval: 300
+    timeout: 3000
+    url: https://www.google.com/generate_204
+    lazy: true
+    max-failed-times: 3
+    hidden: false
+    icon: https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/youtube.svg
+
+  - name: Netflix
+    type: select
+    proxies:
+      - 节点选择
+    include-all: true
+    interval: 300
+    timeout: 3000
+    url: https://www.google.com/generate_204
+    lazy: true
+    max-failed-times: 3
+    hidden: false
+    icon: https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/icon/netflix.svg
+
+  - name: TikTok
+    type: select
+    proxies:
+      - 节点选择
+    include-all: true
+    interval: 300
+    timeout: 3000
+    url: https://www.google.com/generate_204
+    lazy: true
+    max-failed-times: 3
+    hidden: false
+    icon: https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/icon/tiktok.svg
+
+  - name: 动画疯
+    type: select
+    proxies:
+      - 节点选择
+    include-all: true
+    #  filter: '(?i)台|tw|TW'
+    interval: 300
+    timeout: 3000
+    url: https://www.google.com/generate_204
+    lazy: true
+    max-failed-times: 3
+    hidden: false
+    icon: https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/icon/Bahamut.svg
+
+  - name: 国内媒体
+    type: select
+    proxies:
+      - DIRECT
+    #	 include-all: true
+    #  filter: '^(?!.*(官网|套餐|流量|异常|剩余)).*$'
+    interval: 300
+    timeout: 3000
+    url: https://www.google.com/generate_204
+    lazy: true
+    max-failed-times: 3
+    hidden: false
+    icon: https://fastly.jsdelivr.net/gh/Actually-Net/Rules@Rules/assets/icons/cnmedia.svg
+
+  - name: Spotify
+    type: select
+    proxies:
+      - 节点选择
+    include-all: true
+    interval: 300
+    timeout: 3000
+    url: https://www.google.com/generate_204
+    lazy: true
+    max-failed-times: 3
+    hidden: false
+    icon: https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/icon/spotify.svg
+
+
+  #  ###################################################################
+  #  5、兜底组
+  - name: 漏网之鱼
+    type: select
+    proxies:
+      - 节点选择
+    #    - 全局直连
+    #  include-all: true
+    #  filter: '^(?!.*(官网|套餐|流量|异常|剩余)).*$'
+    interval: 300
+    timeout: 3000
+    url: https://www.google.com/generate_204
+    lazy: true
+    max-failed-times: 3
+    hidden: false
+    icon: https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/fish.svg
+
+
+#  ============================================================================
 #  规则集配置
 #  ============================================================================
 rule-providers:
@@ -149,6 +392,22 @@ rule-providers:
     path: ./ruleset/Actually-Nat/diyreject.yaml
     interval: 86400
 
+  cnmedia:
+    type: http
+    behavior: domain
+    format: yaml
+    url: https://fastly.jsdelivr.net/gh/Actually-Net/Rules@Rules/rule-providers/cnmedia.txt
+    path: ./ruleset/Actually-Nat/cnmedia.yaml
+    interval: 86400
+
+  google:
+    type: http
+    behavior: domain
+    format: yaml
+    url: https://fastly.jsdelivr.net/gh/Actually-Net/Rules@Rules/rule-providers/google.txt
+    path: ./ruleset/Actually-Nat/google.yaml
+    interval: 86400
+
   microsoft:
     type: http
     behavior: domain
@@ -180,14 +439,6 @@ rule-providers:
     format: yaml
     url: https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt
     path: ./ruleset/loyalsoldier/apple.yaml
-    interval: 86400
-
-  google:
-    type: http
-    behavior: domain
-    format: yaml
-    url: https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt
-    path: ./ruleset/loyalsoldier/google.yaml
     interval: 86400
 
   proxy:
@@ -295,14 +546,6 @@ rule-providers:
     path: ./ruleset/xiaolin-007/spotify.yaml
     interval: 86400
 
-  bilibilihmt:
-    type: http
-    behavior: classical
-    format: yaml
-    url: https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/rule/BilibiliHMT.txt
-    path: ./ruleset/xiaolin-007/bilibilihmt.yaml
-    interval: 86400
-
   ai:
     type: http
     behavior: classical
@@ -320,270 +563,6 @@ rule-providers:
     interval: 86400
 
 #  ============================================================================
-#  代理组配置
-#  ============================================================================
-proxy-groups:
-  #  1、基础组
-  - name: 节点选择
-    type: select
-    include-all: true
-    filter: '^(?!.*(官网|套餐|流量|异常|剩余)).*$'
-    interval: 300
-    timeout: 3000
-    url: https://www.google.com/generate_204
-    lazy: true
-    max-failed-times: 3
-    hidden: false
-    icon: https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/adjust.svg
-
-  - name: 全局直连
-    type: select
-    proxies:
-      - DIRECT
-      - 节点选择
-    include-all: true
-    interval: 300
-    timeout: 3000
-    url: https://www.google.com/generate_204
-    lazy: true
-    max-failed-times: 3
-    hidden: false
-    icon: https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/link.svg
-
-  - name: 全局拦截
-    type: select
-    proxies:
-      - REJECT
-      - DIRECT
-    interval: 300
-    timeout: 3000
-    url: https://www.google.com/generate_204
-    lazy: true
-    max-failed-times: 3
-    hidden: false
-    icon: https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/block.svg
-    
-  - name: 广告过滤
-    type: select
-    proxies:
-      - REJECT
-      - DIRECT
-    interval: 300
-    timeout: 3000
-    url: https://www.google.com/generate_204
-    lazy: true
-    max-failed-times: 3
-    hidden: false
-    icon: https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/bug.svg
-
-
-  #  ###################################################################
-  #  2、娱乐组
-  - name: 直连游戏
-    type: select
-    proxies:
-      - DIRECT
-    include-all: true
-    interval: 300
-    timeout: 3000
-    url: https://www.google.com/generate_204
-    lazy: true
-    max-failed-times: 3
-    hidden: false
-    icon: https://fastly.jsdelivr.net/gh/Actually-Net/Rules@Rules/assets/icons/directgame.svg
-
-  - name: 代理游戏
-    type: select
-    include-all: true
-    proxies:
-      - DIRECT
-    interval: 300
-    timeout: 3000
-    url: https://www.google.com/generate_204
-    lazy: true
-    max-failed-times: 3
-    hidden: false
-    icon: https://fastly.jsdelivr.net/gh/Actually-Net/Rules@Rules/assets/icons/proxygame.svg
-
-
-  #  ###################################################################
-  #  3、服务组
-  - name: AI
-    type: select
-    proxies:
-      - 节点选择
-    include-all: true
-    interval: 300
-    timeout: 3000
-    url: https://www.google.com/generate_204
-    lazy: true
-    max-failed-times: 3
-    hidden: false
-    icon: https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/chatgpt.svg
-
-  - name: 谷歌服务
-    type: select
-    proxies:
-      - 节点选择
-      - 全局直连
-    include-all: true
-    interval: 300
-    timeout: 3000
-    url: https://www.google.com/generate_204
-    lazy: true
-    max-failed-times: 3
-    hidden: false
-    icon: https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/google.svg
-
-  - name: 微软服务
-    type: select
-    proxies:
-      - DIRECT
-      - 节点选择
-    include-all: true
-    interval: 300
-    timeout: 3000
-    url: https://www.google.com/generate_204
-    lazy: true
-    max-failed-times: 3
-    hidden: false
-    icon: https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/microsoft.svg
-
-  - name: 苹果服务
-    type: select
-    proxies:
-      - 节点选择
-      - 全局直连
-    include-all: true
-    interval: 300
-    timeout: 3000
-    url: https://www.google.com/generate_204
-    lazy: true
-    max-failed-times: 3
-    hidden: false
-    icon: https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/apple.svg
-
-  - name: Telegram
-    type: select
-    proxies:
-      - 节点选择
-      - 全局直连
-    include-all: true
-    interval: 300
-    timeout: 3000
-    url: https://www.google.com/generate_204
-    lazy: true
-    max-failed-times: 3
-    hidden: false
-    icon: https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/telegram.svg
-
-
-  #  ###################################################################
-  #  4、媒体组
-  - name: YouTube
-    type: select
-    proxies:
-      - 节点选择
-      - 全局直连
-    include-all: true
-    interval: 300
-    timeout: 3000
-    url: https://www.google.com/generate_204
-    lazy: true
-    max-failed-times: 3
-    hidden: false
-    icon: https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/youtube.svg
-
-  - name: Netflix
-    type: select
-    proxies:
-      - 节点选择
-      - 全局直连
-    include-all: true
-    interval: 300
-    timeout: 3000
-    url: https://www.google.com/generate_204
-    lazy: true
-    max-failed-times: 3
-    hidden: false
-    icon: https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/icon/netflix.svg
-
-  - name: TikTok
-    type: select
-    proxies:
-      - 节点选择
-    include-all: true
-    interval: 300
-    timeout: 3000
-    url: https://www.google.com/generate_204
-    lazy: true
-    max-failed-times: 3
-    hidden: false
-    icon: https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/icon/tiktok.svg
-
-  - name: 动画疯
-    type: select
-    proxies:
-      - 节点选择
-    include-all: true
-    filter: '(?i)台|tw|TW'
-    interval: 300
-    timeout: 3000
-    url: https://www.google.com/generate_204
-    lazy: true
-    max-failed-times: 3
-    hidden: false
-    icon: https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/icon/Bahamut.svg
-
-  - name: 哔哩哔哩港澳台
-    type: select
-    proxies:
-      - DIRECT
-      - 节点选择
-    include-all: true
-    filter: '^(?!.*(官网|套餐|流量|异常|剩余)).*$'
-    interval: 300
-    timeout: 3000
-    url: https://www.google.com/generate_204
-    lazy: true
-    max-failed-times: 3
-    hidden: false
-    icon: https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/icon/bilibili.svg
-
-  - name: Spotify
-    type: select
-    proxies:
-      - 节点选择
-      - 全局直连
-    include-all: true
-    interval: 300
-    timeout: 3000
-    url: https://www.google.com/generate_204
-    lazy: true
-    max-failed-times: 3
-    hidden: false
-    icon: https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/icon/spotify.svg
-
-
-  #  ###################################################################
-  #  5、兜底组
-  - name: 漏网之鱼
-    type: select
-    proxies:
-      - 节点选择
-      - 全局直连
-    include-all: true
-    filter: '^(?!.*(官网|套餐|流量|异常|剩余)).*$'
-    interval: 300
-    timeout: 3000
-    url: https://www.google.com/generate_204
-    lazy: true
-    max-failed-times: 3
-    hidden: false
-    icon: https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/fish.svg
-
-
-#  ============================================================================
 #  分流规则
 #  ============================================================================
 rules:
@@ -598,7 +577,11 @@ rules:
   - RULE-SET,reject,广告过滤
   - RULE-SET,diyreject,广告过滤                  #  补充拦截
 
-  #  3、自定义规则
+  #  3、游戏
+  - RULE-SET,directgame,直连游戏                 #  直连游戏
+  - RULE-SET,proxygame,代理游戏                  #  代理游戏
+
+  #  4、自定义规则
   - DOMAIN-SUFFIX,googleapis.cn,节点选择         #  Google 服务
   - DOMAIN-SUFFIX,gstatic.com,节点选择           #  Google 静态资源
   - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,节点选择   #  Google Play 下载服务
@@ -606,11 +589,8 @@ rules:
   - DOMAIN,v2rayse.com,节点选择                  #  V2rayse 节点工具
   - RULE-SET,diydirect,全局直连                  #  补充直连
   - RULE-SET,diyproxy,节点选择                   #  补充代理
+  - RULE-SET,cnmedia,国内媒体                    #  国内媒体
   
-  #  4、游戏
-  - RULE-SET,directgame,直连游戏                 #  直连游戏
-  - RULE-SET,proxygame,代理游戏                  #  代理游戏
-
   #  5、精细化分流
   - RULE-SET,ai,AI
   - RULE-SET,youtube,YouTube
@@ -618,7 +598,6 @@ rules:
   - RULE-SET,tiktok,TikTok
   - RULE-SET,spotify,Spotify
   - RULE-SET,bahamut,动画疯
-  - RULE-SET,bilibilihmt,哔哩哔哩港澳台
   
   #  6、服务类
   - RULE-SET,google,谷歌服务
@@ -642,7 +621,7 @@ rules:
   - GEOIP,LAN,全局直连,no-resolve
   - GEOIP,CN,全局直连,no-resolve
 
-  #  9、兜底（最后的兜底规则）
+  #  10、兜底（最后的兜底规则）
   - MATCH,漏网之鱼
 
 #  ============================================================================

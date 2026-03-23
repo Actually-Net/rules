@@ -2,6 +2,7 @@ payload:
   - 'xiaoheimi.cc'
   - 'olevod.com'
   - 'ylsp.tv'
+  - 'm365.cloud.microsoft'
 
 
   
