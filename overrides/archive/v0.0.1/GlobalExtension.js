@@ -120,7 +120,7 @@ const proxyGroups = [
       "type": "select",
       //  "include-all": true,
       "proxies": ["DIRECT"],
-      "icon": "https://fastly.jsdelivr.net/gh/Actually-Net/Rules@Rules/assets/icons/directgame.svg"
+      "icon": "https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/assets/icons/directgame.svg"
     },
     {
       ...groupBaseOption,
@@ -128,7 +128,7 @@ const proxyGroups = [
       "type": "select",
       "include-all": true,
       "proxies": ["节点选择"],
-      "icon": "https://fastly.jsdelivr.net/gh/Actually-Net/Rules@Rules/assets/icons/proxygame.svg"
+      "icon": "https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/assets/icons/proxygame.svg"
     },
 
       //  3、服务组
@@ -214,7 +214,7 @@ const proxyGroups = [
       "proxies": ["DIRECT"],
       //  "include-all": true,
       //  "filter": "^(?!.*(官网|套餐|流量|异常|剩余)).*$",
-      "icon": "https://fastly.jsdelivr.net/gh/Actually-Net/Rules@Rules/assets/icons/cnmedia.svg"
+      "icon": "https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/assets/icons/cnmedia.svg"
     },
     {
       ...groupBaseOption,
@@ -252,49 +252,49 @@ const ruleProviders = {
   "directgame": {
     ...ruleProviderCommon,
     "behavior": "classical",
-    "url": "https://fastly.jsdelivr.net/gh/Actually-Net/Rules@Rules/rule-providers/directgame.txt",
+    "url": "https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/directgame.txt",
     "path": "./ruleset/Actually-Nat/directgame.yaml"
   },
   "proxygame": {
     ...ruleProviderCommon,
     "behavior": "classical",
-    "url": "https://fastly.jsdelivr.net/gh/Actually-Net/Rules@Rules/rule-providers/proxygame.txt",
+    "url": "https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/proxygame.txt",
     "path": "./ruleset/Actually-Nat/proxygame.yaml"
   },
   "diydirect": {
     ...ruleProviderCommon,
     "behavior": "domain",
-    "url": "https://fastly.jsdelivr.net/gh/Actually-Net/Rules@Rules/rule-providers/diydirect.txt",
+    "url": "https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/diydirect.txt",
     "path": "./ruleset/Actually-Nat/diydirect.yaml"
   },
   "diyproxy": {
     ...ruleProviderCommon,
     "behavior": "domain",
-    "url": "https://fastly.jsdelivr.net/gh/Actually-Net/Rules@Rules/rule-providers/diyproxy.txt",
+    "url": "https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/diyproxy.txt",
     "path": "./ruleset/Actually-Nat/diyproxy.yaml"
   },
   "diyreject": {
     ...ruleProviderCommon,
     "behavior": "domain",
-    "url": "https://fastly.jsdelivr.net/gh/Actually-Net/Rules@Rules/rule-providers/diyreject.txt",
+    "url": "https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/diyreject.txt",
     "path": "./ruleset/Actually-Nat/diyreject.yaml"
   },
   "cnmedia": {
     ...ruleProviderCommon,
     "behavior": "domain",
-    "url": "https://fastly.jsdelivr.net/gh/Actually-Net/Rules@Rules/rule-providers/cnmedia.txt",
+    "url": "https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/cnmedia.txt",
     "path": "./ruleset/Actually-Nat/cnmedia.yaml"
   },
   "google": {
     ...ruleProviderCommon,
     "behavior": "domain",
-    "url": "https://fastly.jsdelivr.net/gh/Actually-Net/Rules@Rules/rule-providers/google.txt",
+    "url": "https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/google.txt",
     "path": "./ruleset/Actually-Nat/google.yaml"
   },
   "microsoft": {
     ...ruleProviderCommon,
     "behavior": "domain",
-    "url": "https://fastly.jsdelivr.net/gh/Actually-Net/Rules@Rules/rule-providers/microsoft.txt",
+    "url": "https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/microsoft.txt",
     "path": "./ruleset/Actually-Nat/microsoft.yaml"
   },
 

@@ -160,7 +160,7 @@ proxy-groups:
     lazy: true
     max-failed-times: 3
     hidden: false
-    icon: https://fastly.jsdelivr.net/gh/Actually-Net/Rules@Rules/assets/icons/directgame.svg
+    icon: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/assets/icons/directgame.svg
 
   - name: 代理游戏
     type: select
@@ -173,7 +173,7 @@ proxy-groups:
     lazy: true
     max-failed-times: 3
     hidden: false
-    icon: https://fastly.jsdelivr.net/gh/Actually-Net/Rules@Rules/assets/icons/proxygame.svg
+    icon: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/assets/icons/proxygame.svg
 
 
   #  ###################################################################
@@ -313,7 +313,7 @@ proxy-groups:
     lazy: true
     max-failed-times: 3
     hidden: false
-    icon: https://fastly.jsdelivr.net/gh/Actually-Net/Rules@Rules/assets/icons/cnmedia.svg
+    icon: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/assets/icons/cnmedia.svg
 
   - name: Spotify
     type: select
@@ -356,7 +356,7 @@ rule-providers:
     type: http
     behavior: classical
     format: yaml
-    url: https://fastly.jsdelivr.net/gh/Actually-Net/Rules@Rules/rule-providers/directgame.txt
+    url: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/directgame.txt
     path: ./ruleset/Actually-Nat/directgame.yaml
     interval: 86400
 
@@ -364,7 +364,7 @@ rule-providers:
     type: http
     behavior: classical
     format: yaml
-    url: https://fastly.jsdelivr.net/gh/Actually-Net/Rules@Rules/rule-providers/proxygame.txt
+    url: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/proxygame.txt
     path: ./ruleset/Actually-Nat/proxygame.yaml
     interval: 86400
 
@@ -372,7 +372,7 @@ rule-providers:
     type: http
     behavior: domain
     format: yaml
-    url: https://fastly.jsdelivr.net/gh/Actually-Net/Rules@Rules/rule-providers/diydirect.txt
+    url: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/diydirect.txt
     path: ./ruleset/Actually-Nat/diydirect.yaml
     interval: 86400
 
@@ -380,7 +380,7 @@ rule-providers:
     type: http
     behavior: domain
     format: yaml
-    url: https://fastly.jsdelivr.net/gh/Actually-Net/Rules@Rules/rule-providers/diyproxy.txt
+    url: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/diyproxy.txt
     path: ./ruleset/Actually-Nat/diyproxy.yaml
     interval: 86400
 
@@ -388,7 +388,7 @@ rule-providers:
     type: http
     behavior: domain
     format: yaml
-    url: https://fastly.jsdelivr.net/gh/Actually-Net/Rules@Rules/rule-providers/diyreject.txt
+    url: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/diyreject.txt
     path: ./ruleset/Actually-Nat/diyreject.yaml
     interval: 86400
 
@@ -396,7 +396,7 @@ rule-providers:
     type: http
     behavior: domain
     format: yaml
-    url: https://fastly.jsdelivr.net/gh/Actually-Net/Rules@Rules/rule-providers/cnmedia.txt
+    url: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/cnmedia.txt
     path: ./ruleset/Actually-Nat/cnmedia.yaml
     interval: 86400
 
@@ -404,7 +404,7 @@ rule-providers:
     type: http
     behavior: domain
     format: yaml
-    url: https://fastly.jsdelivr.net/gh/Actually-Net/Rules@Rules/rule-providers/google.txt
+    url: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/google.txt
     path: ./ruleset/Actually-Nat/google.yaml
     interval: 86400
 
@@ -412,7 +412,7 @@ rule-providers:
     type: http
     behavior: domain
     format: yaml
-    url: https://fastly.jsdelivr.net/gh/Actually-Net/Rules@Rules/rule-providers/microsoft.txt
+    url: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/microsoft.txt
     path: ./ruleset/Actually-Nat/microsoft.yaml
     interval: 86400
 
