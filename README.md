@@ -10,6 +10,7 @@
   
 # 链接
   方便远程调用
+  
   GlobalCoverage.yaml（全局覆写配置）
 ```yaml
 https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/overrides/release/GlobalCoverage.yaml
