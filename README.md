@@ -12,32 +12,33 @@
   方便远程调用
   
   GlobalCoverage.yaml（全局覆写配置）
-```yaml
-https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/overrides/release/GlobalCoverage.yaml
-```
+
 ```yaml
 https://raw.githubusercontent.com/Actually-Net/rules/main/overrides/release/GlobalCoverage.yaml
 ```
-  GlobalExtension.js（全局拓展脚本）
 ```yaml
-https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/overrides/release/GlobalExtension.js
+https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/overrides/release/GlobalCoverage.yaml
 ```
+  GlobalExtension.js（全局拓展脚本）
 ```yaml
 https://raw.githubusercontent.com/Actually-Net/rules/main/overrides/release/GlobalExtension.js
 ```
-  GlobalCoverage.yaml（全局覆写配置-dev）
 ```yaml
-https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/overrides/dev/GlobalCoverage.yaml
+https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/overrides/release/GlobalExtension.js
 ```
+  GlobalCoverage.yaml（全局覆写配置-dev）
 ```yaml
 https://raw.githubusercontent.com/Actually-Net/rules/main/overrides/dev/GlobalCoverage.yaml
 ```
+```yaml
+https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/overrides/dev/GlobalCoverage.yaml
+```
   GlobalExtension.js（全局拓展脚本-dev）
 ```yaml
-https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/overrides/dev/GlobalExtension.js
+https://raw.githubusercontent.com/Actually-Net/rules/main/overrides/dev/GlobalExtension.js
 ```
 ```yaml
-https://raw.githubusercontent.com/Actually-Net/rules/main/overrides/dev/GlobalExtension.js
+https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/overrides/dev/GlobalExtension.js
 ```
 
 
