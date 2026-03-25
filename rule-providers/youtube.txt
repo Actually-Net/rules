@@ -1,0 +1,26 @@
+payload:
+  # 1. 核心门户与入口
+  - 'youtube.com'
+  - 'youtu.be'
+  - 'yt.be'
+
+  # 2. 视频流分发 (涵盖所有 nhacmp3 等子域名)
+  - 'googlevideo.com'
+  - 'gvt1.com'
+  - 'gvt2.com'
+
+  # 3. 身份验证与 API (解决 Premium 测试失败/4K 降级)
+  - 'youtubei.googleapis.com'
+  - 'jnn-pa.googleapis.com'
+  - 'googledisplayads-pa.googleapis.com'
+  - 'widevine.com'
+  - 'video.google.com'
+
+  # 4. 资源加载与 UI
+  - 'ytimg.com'
+  - 'ggpht.com'
+  - 'googleusercontent.com'
+  - 'youtube-ui.l.google.com'
+  - 'ytstatic.l.google.com'
+  - 'youtube-nocookie.com'
+  - 'googlevisualization.com'
