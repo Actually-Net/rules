@@ -74,6 +74,38 @@ const dnsConfig = {
 
 
 ///////////////////////////////////////////////////////////////////////////////////
+//  流量嗅探配置
+///////////////////////////////////////////////////////////////////////////////////
+const snifferConfig = {
+  "enable": true,
+  //  处理那些没有域名只有 IP 的请求
+  "parse-pure-ip": true, 
+  "force-domain": [
+    "+.googleapis.com",
+    "+.apple.com",
+    "+.icloud.com",
+    "geosite:cn"
+  ],
+  "skip-domain": [
+    "Mijia Cloud",
+    "dlg.io.mi.com",
+    "+.local",
+    "+.lan",
+    "+.push.apple.com"
+  ],
+  "sniff": {
+    "TLS": {
+      "ports": [443, 8443]
+    },
+    "HTTP": {
+      //  端口范围
+      "ports": [80, "8080-8888"] 
+    },
+  }
+};
+
+
+///////////////////////////////////////////////////////////////////////////////////
 //  代理组配置
 ///////////////////////////////////////////////////////////////////////////////////
 //  代理组通用配置
@@ -285,6 +317,12 @@ const ruleProviders = {
     "url": "https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/cnmedia.txt",
     "path": "./ruleset/Actually-Nat/cnmedia.yaml"
   },
+  "youtube": {
+    ...ruleProviderCommon,
+    "behavior": "classical",
+    "url": "https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/youtube.txt",
+    "path": "./ruleset/Actually-Nat/youtube.yaml"
+  },
   "google": {
     ...ruleProviderCommon,
     "behavior": "domain",
@@ -379,12 +417,6 @@ const ruleProviders = {
     "url": "https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/rule/Bahamut.txt",
     "path": "./ruleset/xiaolin-007/bahamut.yaml"
   },
-  "YouTube": {
-    ...ruleProviderCommon,
-    "behavior": "classical",
-    "url": "https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/rule/YouTube.txt",
-    "path": "./ruleset/xiaolin-007/YouTube.yaml"
-  },
   "Netflix": {
     ...ruleProviderCommon,
     "behavior": "classical",
@@ -443,7 +475,7 @@ const rules = [
 
   //  5、细化分流
   "RULE-SET,AI,AI",
-  "RULE-SET,YouTube,YouTube",
+  "RULE-SET,youtube,YouTube",
   "RULE-SET,Netflix,Netflix",
   "RULE-SET,TikTok,TikTok",
   "RULE-SET,Spotify,Spotify",
@@ -489,6 +521,9 @@ function main(config) {
 
   //  覆盖原配置中DNS配置
   config["dns"] = dnsConfig;
+
+  //  覆盖原配置中Sniffer配置
+  config["sniffer"] = snifferConfig;
 
   //  覆盖原配置中的代理组
   config["proxy-groups"] = proxyGroups;
