@@ -20,4 +20,7 @@ payload:
   - 'DOMAIN-SUFFIX,game.qq.com'
   - 'DOMAIN-SUFFIX,wegame.gtimg.com'
   - 'DOMAIN-SUFFIX,wegame.gtimg.com.cn'
+  - 'DOMAIN-SUFFIX,tgp.qq.com'
+  - 'DOMAIN-SUFFIX,tgp_game.qq.com'
+  - 'DOMAIN-SUFFIX,wegameplus.qq.com'
 
