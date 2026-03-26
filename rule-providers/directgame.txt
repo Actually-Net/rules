@@ -26,5 +26,3 @@ payload:
 
   # Warframe-Wegame
   - 'DOMAIN-SUFFIX,content-zhpt.wf.qq.com'
-
-
