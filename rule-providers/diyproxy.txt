@@ -20,4 +20,8 @@ payload:
   #  - '+.sharepoint.com'
   #  - '+.1drv.com'
   #  - '+.onedrive.com'
+
+  # 海外加密DNS
+  - 'cloudflare-dns.com'
+  - 'dns.google'
   
