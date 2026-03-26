@@ -24,3 +24,7 @@ payload:
   - 'DOMAIN-SUFFIX,tgp_game.qq.com'
   - 'DOMAIN-SUFFIX,wegameplus.qq.com'
 
+  # Warframe-Wegame
+  - 'DOMAIN-SUFFIX,content-zhpt.wf.qq.com'
+
+
