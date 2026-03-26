@@ -31,7 +31,7 @@ find-process-mode: strict
 #  TUN 模式配置
 tun:
   enable: true
-  stack: gVisor
+  stack: system
   auto-route: true
   #  自动检测出口网卡，防止环路
   auto-detect-interface: true
@@ -39,6 +39,7 @@ tun:
   strict-route: true
   dns-hijack:
     - any:53
+    - tcp://any:53
 
 #  ============================================================================
 #  DNS 配置
@@ -75,38 +76,53 @@ dns:
     - 'pool.ntp.org'
     #  微信快速登录检测失败
     - 'localhost.work.weixin.qq.com'
+
+  #  DNS 策略（国内域名使用国内 DNS,优先于 nameserver/fallback 查询）
+  nameserver-policy:
+    'geosite:private,cn':
+      - https://223.5.5.5/dns-query                      #  阿里 DoH
+      - https://119.29.29.29/dns-query                   #  腾讯 DoH
   
-  #  解析直连 DNS 域名
+  #  默认 DNS 域名
   default-nameserver:
-    - 223.5.5.5
-    - 1.2.4.8
+    - https://223.5.5.5/dns-query                      #  阿里 DoH
+    - https://119.29.29.29/dns-query                   #  腾讯 DoH
+
+  #  直连 DNS 服务器
+  direct-nameserver:
+    - https://223.5.5.5/dns-query                      #  阿里 DoH
+    - https://119.29.29.29/dns-query                   #  腾讯 DoH
   
   #  代理 DNS 服务器
   nameserver:
-    - https://1.1.1.1/dns-query             #  Cloudflare DNS
-    - https://8.8.4.4/dns-query             #  Google DNS
-  
+    - https://1.1.1.1/dns-query                        #  Cloudflare DNS
+    - https://8.8.4.4/dns-query                        #  Google DNS
+
   #  解析代理节点域名 / 代理链路相关域名
   proxy-server-nameserver:
-    - 1.1.1.1             #  Cloudflare DNS
-    - 8.8.4.4             #  Google DNS
-  
-  #  直连 DNS 服务器
-  direct-nameserver:
-    - https://223.5.5.5/dns-query           #  阿里 DoH
-    - https://doh.pub/dns-query             #  腾讯 DoH
+    - 1.1.1.1                        #  Cloudflare DNS
+    - 8.8.4.4                        #  Google DNS
 
   #  回落 DNS
-  fallback:
-    - tcp://9.9.9.9:53
-  
-  #  DNS 策略（国内域名使用国内 DNS）
-  nameserver-policy:
-    'geosite:private,cn':
-      - https://223.5.5.5/dns-query
-      - https://doh.pub/dns-query
+  #  fallback:
+  #    - https://9.9.9.9/dns-query
+  #    - https://1.1.1.1/dns-query
 
-  
+  #  后备域名解析服务器筛选
+  #  fallback-filter:
+  #    geoip: true
+  #    geoip-code: CN
+  #    geosite:
+  #      - gfw
+  #    ipcidr:
+  #      - 0.0.0.0/8
+  #      - 10.0.0.0/8
+  #      - 100.64.0.0/10
+  #      - 127.0.0.0/8
+  #      - 169.254.0.0/16
+  #      - 240.0.0.0/4
+
+
 #  ============================================================================
 #  流量嗅探配置
 #  ============================================================================
@@ -125,6 +141,9 @@ sniffer:
         - 8080-8888
   force-domain:
     - "+.googleapis.com"
+    - "+.bilivideo.com"
+    - "+.bilivideo.cn"
+    - "+.hdslb.com"
     - "+.apple.com"
     - "+.icloud.com"
     - "geosite:cn"
@@ -597,6 +616,7 @@ rule-providers:
 #  ============================================================================
 rules:
   #  1、本地直连
+  - AND,((NETWORK,UDP),(DST-PORT,443)),广告过滤  #  强制拦截 UDP 443 
   - IP-CIDR,10.0.0.0/8,全局直连,no-resolve
   - IP-CIDR,172.16.0.0/12,全局直连,no-resolve
   - IP-CIDR,192.168.0.0/16,全局直连,no-resolve
