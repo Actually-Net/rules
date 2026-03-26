@@ -31,12 +31,26 @@ payload:
 
   # 哔哩哔哩
   # Bilibili
-  - '+.bilibili.com'
-  - '+.biliapi.com'
-  - '+.bilivideo.com'
-  - '+.hdslb.com'
-  - '+.biligame.com'
-
+ - '+.bilibili.com'       # 主站及 API
+ - '+.biliapi.com'        # 移动端 API
+ - '+.biliapi.net'        # 备用 API 接口（必补）
+ - '+.bilivideo.com'      # 视频流主域名
+ - '+.bilivideo.cn'       # 国内视频流
+ - '+.mcdn.bilivideo.cn'  # P2P 边缘加速
+ - '+.bilivideo.net'      # 部分海外回源加速（建议直连）
+ - '+.hdslb.com'          # 静态资源、图片、看板娘
+ - '+.hdslb.net'          # 静态资源备用（必补）
+  # 游戏与直播相关
+ - '+.biligame.com'       # 哔哩哔哩游戏
+ - '+.biligame.net'       # 游戏资源下载
+ - '+.biliivideo.com'     # 直播流相关（注意多了一个 i）
+ - '+.bilimm.com'         # 移动端相关
+  # P2P 与边缘计算 (这些域名解析量极大，必须直连以防代理流量暴涨)
+ - '+.szbdyd.com'         # 哔哩哔哩自建 CDN 节点域名（关键！）
+ - '+.mcdn.szbdyd.com'    # 边缘计算节点
+ - '+.akamaized.net'      # 虽是 Akamai，但 B 站国内加速常用，建议配合 policy
+  
+  
   # 咪咕视频
   # Migu Video
   - '+.miguvideo.com'
@@ -144,6 +158,3 @@ payload:
   - 'api-jooxtt.sanook.com'
   - 'api.joox.com'
   - 'joox.com'
-
-  # 有意排除：纯海外流媒体服务
-  # Excluded on purpose: overseas-only media services
