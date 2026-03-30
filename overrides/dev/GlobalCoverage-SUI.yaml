@@ -190,7 +190,7 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT
-    #   include-all: true
+    include-all: true
     interval: 300
     timeout: 3000
     url: https://www.google.com/generate_204
@@ -202,7 +202,8 @@ proxy-groups:
   - name: 代理游戏
     type: select
     proxies:
-      - '节点选择'
+      - 节点选择
+      - DIRECT
     include-all: true
     interval: 300
     timeout: 3000
