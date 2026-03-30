@@ -4,6 +4,9 @@ payload:
   - 'DOMAIN-SUFFIX,store.steampowered.com'
   - 'DOMAIN-SUFFIX,api.steampowered.com'
   - 'DOMAIN-SUFFIX,steamcharts.com'
+  - 'DOMAIN-SUFFIX,steamusercontent.com'
+  - 'DOMAIN-SUFFIX,steamstatic.com'
+  
 
   # Blizzard / Battle.net / Diablo Immortal
   - 'DOMAIN-SUFFIX,battle.net'

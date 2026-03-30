@@ -9,9 +9,8 @@ payload:
   - 'DOMAIN-SUFFIX,cm.steampowered.com'
   - 'DOMAIN-SUFFIX,steamserver.net'
   - 'DOMAIN-SUFFIX,cdn.steampowered.com'
-  - 'DOMAIN-SUFFIX,steampowered.com'
-  - 'DOMAIN-SUFFIX,steamstatic.com'
   - 'DOMAIN-SUFFIX,media.steampowered.com'
+  - 'DOMAIN-SUFFIX,dll.eccdnx.com'
 
   # Steam IP-CIDR
   - 'IP-CIDR,45.121.184.0/24'
