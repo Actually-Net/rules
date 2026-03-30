@@ -4,14 +4,6 @@ payload:
   # - 'PROCESS-NAME,SquadGame.exe'
   # - 'PROCESS-NAME,EasyAntiCheat_EOS.exe'
 
-  # Steam Download & CDN
-  - 'DOMAIN,steamcdn-a.akamaihd.net'
-  - 'DOMAIN-SUFFIX,cm.steampowered.com'
-  - 'DOMAIN-SUFFIX,steamserver.net'
-  - 'DOMAIN-SUFFIX,cdn.steampowered.com'
-  - 'DOMAIN-SUFFIX,media.steampowered.com'
-  - 'DOMAIN-SUFFIX,dll.eccdnx.com'
-
   # Steam IP-CIDR
   - 'IP-CIDR,45.121.184.0/24'
   - 'IP-CIDR,103.10.124.0/23'
