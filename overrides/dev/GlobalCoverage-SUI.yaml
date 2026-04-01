@@ -31,7 +31,7 @@ find-process-mode: strict
 #  TUN 模式配置
 tun:
   enable: true
-  stack: system
+  stack: gvisor
   auto-route: true
   #  自动检测出口网卡，防止环路
   auto-detect-interface: true
@@ -49,7 +49,7 @@ dns:
   listen: 0.0.0.0:1053
   ipv6: false
   prefer-h3: false
-  respect-rules: false
+  respect-rules: true
   use-system-hosts: false
   cache-algorithm: arc
   enhanced-mode: fake-ip
@@ -64,6 +64,9 @@ dns:
     - '*.localhost'
     - '*.localdomain'
     - '*.home.arpa'
+    #  Windows 网络探测
+    - '+.msftconnecttest.com'
+    - '+.msftncsi.com'
     #  追加条目
     - '+.in-addr.arpa'
     - '+.ip6.arpa'
@@ -72,7 +75,8 @@ dns:
     - 'pool.ntp.org'
     - '+.example.org'
     #  部分内网预留
-    - 'rule-set:diydirect'
+    - '*.gs.com'
+    - '*.gamesci.com.cn'
     #  STUN / 游戏机 / 语音通话
     - 'stun.*'
     - 'srv.nintendo.net'
@@ -91,17 +95,12 @@ dns:
       - https://223.5.5.5/dns-query                      #  阿里 DoH
       - https://119.29.29.29/dns-query                   #  腾讯 DoH
     
-  #  默认 DNS 域名
+  #  基础引导 DNS 
   default-nameserver:
-    - https://223.5.5.5/dns-query                      #  阿里 DoH
-    - https://119.29.29.29/dns-query                   #  腾讯 DoH
-
-  #  直连 DNS 服务器
-  direct-nameserver:
-    - https://223.5.5.5/dns-query                      #  阿里 DoH
-    - https://119.29.29.29/dns-query                   #  腾讯 DoH
+    - 223.5.5.5                      #  阿里 DoH
+    - 119.29.29.29                   #  腾讯 DoH
   
-  #  代理 DNS 服务器
+  #  兜底 DNS 服务器
   nameserver:
     - https://1.1.1.1/dns-query                        #  Cloudflare DNS
     - https://8.8.4.4/dns-query                        #  Google DNS
