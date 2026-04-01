@@ -1,4 +1,15 @@
 payload:
+  #  Windows 网络探测
+  - '+.msftconnecttest.com'
+  - '+.msftncsi.com'
+
+  #  QQ 快速登录检测失败
+  - 'localhost.ptlogin2.qq.com'
+  - 'localhost.sec.qq.com'
+
+  #  微信快速登录检测失败
+  - 'localhost.work.weixin.qq.com'
+
   #  Samsung
   - 'policy.samsungcloud.com'
   - 'play.samsungcloudcn.com'
@@ -8,7 +19,6 @@ payload:
   - '+.onejailbreak.com'
   - '*.gs.com'
   - '*.gamesci.com.cn'
-
 
   #  Alibaba
   - '+.alibaba'
