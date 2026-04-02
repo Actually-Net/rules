@@ -5,6 +5,16 @@ payload:
 
   #  微信快速登录检测失败
   - 'localhost.work.weixin.qq.com'
+  - '+.weixin.qq.com'
+  - '+.wechat.com'
+
+  #  Windows
+  - "time.windows.com"
+  - "+.msftconnecttest.com"
+  - "+.msftncsi.com"
+  - "+.wpsmail.net"
+  - "+.henzanapp.com"
+  - "+.pconline.com.cn"
 
   #  Samsung
   - 'policy.samsungcloud.com'
