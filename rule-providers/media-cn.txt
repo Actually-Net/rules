@@ -18,6 +18,7 @@ payload:
   - DOMAIN-SUFFIX,szbdyd.com         # 哔哩哔哩自建 CDN 节点域名（关键！）
   - DOMAIN-SUFFIX,mcdn.szbdyd.com    # 边缘计算节点
   - DOMAIN-SUFFIX,akamaized.net      # 虽是 Akamai，但 B 站国内加速常用，建议配合 policy
+  - GEOIP,bilibili
   - GEOSITE,bilibili
 
   #  爱奇异
