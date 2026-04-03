@@ -1,0 +1,39 @@
+payload:
+  #  Microsoft AI & Copilot
+  - DOMAIN-SUFFIX,copilot.microsoft.com
+  - DOMAIN-SUFFIX,bing.com
+  - DOMAIN-SUFFIX,bing.net
+  - DOMAIN-SUFFIX,bingapis.com
+  - DOMAIN-SUFFIX,openai.azure.com
+  - DOMAIN-SUFFIX,openai.azure.net
+  - DOMAIN-SUFFIX,azure-devices.net
+  - DOMAIN-SUFFIX,gateway.bingvis.com
+  - DOMAIN-SUFFIX,edgeservices.bing.com
+
+  #  Microsoft 365 & Office Cloud
+  - DOMAIN-SUFFIX,m365.cloud
+  - DOMAIN-SUFFIX,office.com
+  - DOMAIN-SUFFIX,office.net
+  - DOMAIN-SUFFIX,office365.com
+  - DOMAIN-SUFFIX,sharepoint.com
+  - DOMAIN-SUFFIX,sharepointonline.com
+  - DOMAIN-SUFFIX,skype.com
+  - DOMAIN-SUFFIX,skypeassets.com
+  - DOMAIN-SUFFIX,teams.microsoft.com
+
+  #  Azure & Professional Services
+  - DOMAIN-SUFFIX,azure.com
+  - DOMAIN-SUFFIX,azure.net
+  - DOMAIN-SUFFIX,azureedge.net
+  - DOMAIN-SUFFIX,azure-dns.com
+  - DOMAIN-SUFFIX,azure-dns.net
+  - DOMAIN-SUFFIX,windows.net
+  - DOMAIN-SUFFIX,visualstudio.com
+  - DOMAIN-SUFFIX,dev.azure.com
+
+  #  OneDrive & Storage (因境内连接性极差，建议强制代理)
+  - DOMAIN-SUFFIX,onedrive.com
+  - DOMAIN-SUFFIX,1drv.ms
+  - DOMAIN-SUFFIX,storage.live.com
+  - DOMAIN-SUFFIX,content-storage-signal.com
+  - DOMAIN-SUFFIX,skyapi.onedrive.com
