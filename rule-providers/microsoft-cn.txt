@@ -1,0 +1,34 @@
+payload:
+  #  Microsoft Core Infrastructure (Direct for Activation & Auth)
+  - DOMAIN,login.microsoftonline.com
+  - DOMAIN,login.microsoft.com
+  - DOMAIN,auth.gfx.ms
+  - DOMAIN,account.microsoft.com
+  - DOMAIN-SUFFIX,msauth.net
+  - DOMAIN-SUFFIX,msauthimages.net
+  - DOMAIN-SUFFIX,msftauth.net
+  - DOMAIN-SUFFIX,msftauthimages.net
+
+  #  Windows & Store (Direct for CDN/Updates)
+  - DOMAIN-SUFFIX,windows.com
+  - DOMAIN-SUFFIX,windowsupdate.com
+  - DOMAIN-SUFFIX,update.microsoft.com
+  - DOMAIN-SUFFIX,delivery.mp.microsoft.com
+  - DOMAIN,dl.delivery.mp.microsoft.com
+  - DOMAIN,download.windowsupdate.com
+  - DOMAIN,ctldl.windowsupdate.com
+  - DOMAIN,ntservicepack.microsoft.com
+  - DOMAIN,go.microsoft.com
+  - DOMAIN,licensing.mp.microsoft.com
+  - DOMAIN-SUFFIX,wns.windows.com
+  - DOMAIN,wscont.apps.microsoft.com
+  - DOMAIN,store-images.s-microsoft.com
+
+  #  Microsoft / Office CDN (Direct for Installation)
+  - DOMAIN,officeclient.microsoft.com
+  - DOMAIN,officecdn.microsoft.com
+  - DOMAIN,officecdn-microsoft-com.akamaized.net
+  - DOMAIN,config.office.com
+
+  #  Microsoft CN Geosite Fallback
+  - GEOSITE,microsoft@cn
