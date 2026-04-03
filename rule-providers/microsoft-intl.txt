@@ -40,11 +40,14 @@ payload:
 
   #  microsoft.com子域
   - DOMAIN-SUFFIX,bap.microsoft.com
+  - DOMAIN-SUFFIX,graph.microsoft.com
   - DOMAIN-SUFFIX,entra.microsoft.com
   - DOMAIN-SUFFIX,data.microsoft.com
   - DOMAIN-SUFFIX,mp.microsoft.com
   - DOMAIN-SUFFIX,csp.microsoft.com
   - DOMAIN-SUFFIX,entra.microsoft.com
+  - DOMAIN-SUFFIX,activedirectory.microsoft.com
+  - DOMAIN-SUFFIX,checkappexec.microsoft.com
 
   #  补充一些奇怪域名
   - DOMAIN-SUFFIX,trafficmanager.net
