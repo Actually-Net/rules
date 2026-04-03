@@ -1,6 +1,5 @@
 payload:
   #  海外免费影视
-  
   - DOMAIN-SUFFIX,xiaoheimi.cc
   - DOMAIN-SUFFIX,olevod.com
   - DOMAIN-SUFFIX,ylsp.tv
