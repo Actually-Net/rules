@@ -13,9 +13,8 @@ ipv6: false
 #  Web UI 配置 （移动端概率不可用）
 external-controller: 127.0.0.1:9090
 secret: "809050203040"  #  密钥根据需求自己改
-external-ui: ui
+external-ui: ui/zashboard
 external-ui-name: zashboard
-external-ui-url: "https://github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip"
 
 #  配置持久化
 profile:
