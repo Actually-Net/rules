@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="1" dy="1" stdDeviation="1.5" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Microsoft Squares with subtle shadow -->
+  <g filter="url(#shadow)">
+    <rect x="8" y="10" width="14" height="14" rx="1.5" fill="#f25022"/>
+    <rect x="24" y="10" width="14" height="14" rx="1.5" fill="#7fba00"/>
+    <rect x="8" y="26" width="14" height="14" rx="1.5" fill="#00a4ef"/>
+    <rect x="24" y="26" width="14" height="14" rx="1.5" fill="#ffb900"/>
+  </g>
+
+  <!-- International / Globe overlay in bottom right -->
+  <g transform="translate(25, 25)">
+    <!-- White background to cut out Microsoft square behind the globe -->
+    <circle cx="11" cy="11" r="10" fill="#ffffff" />
+    <circle cx="11" cy="11" r="9" fill="#e1f5fe" />
+    
+    <!-- Globe Grid -->
+    <path d="M 2 11 h 18" fill="none" stroke="#1976d2" stroke-width="1.2"/>
+    <path d="M 11 2 v 18" fill="none" stroke="#1976d2" stroke-width="1.2"/>
+    <ellipse cx="11" cy="11" rx="4.5" ry="9" fill="none" stroke="#1976d2" stroke-width="1.2"/>
+    
+    <!-- Outer rim -->
+    <circle cx="11" cy="11" r="9" fill="none" stroke="#1976d2" stroke-width="1.2"/>
+  </g>
+</svg>
