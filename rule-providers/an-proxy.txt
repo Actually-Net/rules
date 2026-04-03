@@ -1,0 +1,9 @@
+payload:
+  # 海外加密DNS
+  - DOMAIN,cloudflare-dns.com
+  - DOMAIN,dns.google
+
+  # DIY
+  - DOMAIN,v2rayse.com
+  - DOMAIN-SUFFIX,github.io
+  - GEOSITE,github
