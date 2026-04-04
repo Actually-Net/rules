@@ -7,14 +7,8 @@ payload:
   - DOMAIN-SUFFIX,henzanapp.com
   - DOMAIN-SUFFIX,pconline.com.cn
 
-  #  QQ 快速登录检测失败
-  - DOMAIN,localhost.ptlogin2.qq.com
-  - DOMAIN,localhost.sec.qq.com
-  #  微信快速登录检测失败
-  - DOMAIN,localhost.work.weixin.qq.com
-  - DOMAIN-SUFFIX,weixin.qq.com
-  - DOMAIN-SUFFIX,wechat.com
   #  腾讯
+  - DOMAIN-SUFFIX,wechat.com
   - GEOSITE,tencent
 
   #  DIY
