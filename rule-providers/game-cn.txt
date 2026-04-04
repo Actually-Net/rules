@@ -30,10 +30,10 @@
   - DOMAIN-SUFFIX,eccdnx.com
   - DOMAIN-SUFFIX,sycontroller.com
   - DOMAIN-SUFFIX,val.smogfly.com
-  - IP-CIDR,183.240.90.162/24
-  - IP-CIDR,183.240.90.162/24
-  - IP-CIDR,183.240.90.193/24
-  - IP-CIDR,183.240.90.197/24
+  - IP-CIDR,183.240.90.162/24,no-resolve
+  - IP-CIDR,183.240.90.162/24,no-resolve
+  - IP-CIDR,183.240.90.193/24,no-resolve
+  - IP-CIDR,183.240.90.197/24,no-resolve
   - GEOSITE,steam@cn
 
   # all(中国区)
