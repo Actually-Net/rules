@@ -102,7 +102,7 @@ dns:
     '+.gamesci.com.cn': '192.168.20.201#DIRECT'
     'geosite:private,cn,apple':
       - https://223.5.5.5/dns-query
-      - https://119.29.29.29/dns-query
+      - https://1.12.12.12/dns-query
     'geosite:gfw,geolocation-!cn':
       - https://1.1.1.1/dns-query
       - https://8.8.4.4/dns-query
@@ -111,13 +111,13 @@ dns:
   #  主要 DNS 服务器
   nameserver:
     - https://223.5.5.5/dns-query
-    - https://119.29.29.29/dns-query
+    - https://1.12.12.12/dns-query
     - https://1.1.1.1/dns-query
 
   #  解析节点链路域名
   proxy-server-nameserver:
     - https://223.5.5.5/dns-query
-    - https://119.29.29.29/dns-query
+    - https://1.12.12.12/dns-query
 
   #  兜底 DNS
   fallback:
