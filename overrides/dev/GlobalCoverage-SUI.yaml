@@ -13,8 +13,9 @@ ipv6: false
 #  Web UI 配置 （移动端概率不可用）
 external-controller: 127.0.0.1:9090
 secret: "809050203040"  #  密钥根据需求自己改
-external-ui: ui/zashboard
-external-ui-name: zashboard
+external-ui: ui
+external-ui-name: dist
+external-ui-url: "https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip"
 
 #  配置持久化
 profile:
@@ -160,7 +161,6 @@ sniffer:
     - '+.apple.com'
     - '+.icloud.com'
     - '+.microsoft.com'
-    - 'geosite:cn'
   skip-domain:
     - 'Mijia Cloud'
     - 'dlg.io.mi.com'
@@ -169,7 +169,6 @@ sniffer:
     - '+.push.apple.com'
     - '+.gs.com'
     - '+.gamesci.com.cn'
-
 
 #  ============================================================================
 #  代理组配置
