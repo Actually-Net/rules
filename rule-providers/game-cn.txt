@@ -16,14 +16,25 @@
   - DOMAIN-SUFFIX,wegameplus.qq.com
 
   # Warframe-Wegame
-  - DOMAIN-SUFFIX,wf.qq.com
   - AND,((NETWORK,UDP),(DST-PORT,4950/4955))
   - AND,((NETWORK,UDP),(DST-PORT,4960/4965))
   - AND,((NETWORK,UDP),(DST-PORT,4970/4985/4990/4995/3074/3080))
+  - DOMAIN-SUFFIX,wf.qq.com
+  - DOMAIN-SUFFIX,anticheatexpert.com
 
   # Steam-DIRECT
-  - GEOSITE,steam@cn
+  - DOMAIN-SUFFIX,steamusercontent.com
+  - DOMAIN-SUFFIX,steamserver.net
+  - DOMAIN-SUFFIX,cdn.steampowered.com
+  - DOMAIN-SUFFIX,steamstatic.com
   - DOMAIN-SUFFIX,eccdnx.com
+  - DOMAIN-SUFFIX,sycontroller.com
+  - DOMAIN-SUFFIX,val.smogfly.com
+  - IP-CIDR,183.240.90.162/24
+  - IP-CIDR,183.240.90.162/24
+  - IP-CIDR,183.240.90.193/24
+  - IP-CIDR,183.240.90.197/24
+  - GEOSITE,steam@cn
 
   # all(中国区)
   - GEOSITE,category-games@cn
