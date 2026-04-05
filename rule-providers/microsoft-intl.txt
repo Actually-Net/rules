@@ -16,6 +16,8 @@ payload:
   - DOMAIN-SUFFIX,office.net
   - DOMAIN-SUFFIX,office365.com
   - DOMAIN-SUFFIX,sharepoint.com
+  - DOMAIN-SUFFIX,officeapps.live.com
+  - DOMAIN-SUFFIX,svc.cloud.microsoft
   - DOMAIN-SUFFIX,sharepointonline.com
   - DOMAIN-SUFFIX,skype.com
   - DOMAIN-SUFFIX,skypeassets.com
