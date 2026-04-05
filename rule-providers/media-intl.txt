@@ -99,6 +99,3 @@ payload:
 
   #  Pixiv 全球插画专站
   - GEOSITE,pixiv
-
-  #  通用代理媒体库与其他 (兜底一些零碎的外网云传流媒体和图床)
-  - GEOSITE,proxymedia

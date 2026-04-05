@@ -26,7 +26,6 @@
   
   - DOMAIN-SUFFIX,steamunlocked.net
   - DOMAIN-SUFFIX,steamygamer.com
-  - GEOSITE,steampowered
 
   #  EA 橘子网络
   - GEOSITE,ea

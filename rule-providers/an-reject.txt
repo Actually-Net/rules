@@ -1,10 +1,6 @@
 payload:
   #  拦截集合 & 特殊处理
   - AND,((NETWORK,UDP),(DST-PORT,443))
-  # - GEOSITE,category-ads-all
-  - GEOSITE,malware
-  - GEOSITE,phishing
-  - GEOSITE,hijacking
 
   #  单点拦截
   - DOMAIN-SUFFIX,flashtalking.com
