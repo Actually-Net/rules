@@ -29,6 +29,3 @@ payload:
   #  Samsung
   - DOMAIN,policy.samsungcloud.com
   - DOMAIN,play.samsungcloudcn.com
-
-  #  部分Google直连服务
-  - GEOSITE,google-cn
