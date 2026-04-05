@@ -7,11 +7,10 @@ payload:
   - DOMAIN-SUFFIX,actually.vip
   - DOMAIN,v2rayse.com
   - DOMAIN-SUFFIX,github.io
+  - PROCESS-NAME,Code.exe   # VS Code
+  - PROCESS-NAME,node.exe   # Node.js
   
-
   # 海外大站
-  - GEOSITE,twitter
-  - GEOSITE,pixiv
-  - GEOSITE,github
-  # 学术站点中的非中国区域内容
-  - GEOSITE,category-scholar-!cn
+  - DOMAIN-SUFFIX,twitter
+  - DOMAIN-SUFFIX,pixiv
+  - DOMAIN-SUFFIX,github
