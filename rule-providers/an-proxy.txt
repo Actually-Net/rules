@@ -7,7 +7,6 @@ payload:
   - DOMAIN-SUFFIX,actually.vip
   - DOMAIN,v2rayse.com
   - DOMAIN-SUFFIX,github.io
-  - PROCESS-NAME,Code.exe   # VS Code
   - PROCESS-NAME,node.exe   # Node.js
   
   # 海外大站
