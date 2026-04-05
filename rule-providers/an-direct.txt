@@ -9,22 +9,11 @@ payload:
 
   #  腾讯
   - DOMAIN-SUFFIX,wechat.com
-  - GEOSITE,tencent
 
   #  DIY
   - DOMAIN-SUFFIX,onejailbreak.com
   - DOMAIN-SUFFIX,gs.com
   - DOMAIN-SUFFIX,gamesci.com.cn
-  - GEOSITE,speedtest
-
-  #  阿里
-  - GEOSITE,alibaba
-  #  百度
-  - GEOSITE,baidu
-  #  字节跳动
-  - GEOSITE,bytedance
-  #  网易
-  - GEOSITE,netease
 
   #  Samsung
   - DOMAIN,policy.samsungcloud.com
