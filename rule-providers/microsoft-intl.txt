@@ -41,6 +41,7 @@ payload:
   - DOMAIN-SUFFIX,skyapi.onedrive.com
 
   #  microsoft.com子域
+  - DOMAIN-SUFFIX,edge.microsoft.com
   - DOMAIN-SUFFIX,bap.microsoft.com
   - DOMAIN-SUFFIX,graph.microsoft.com
   - DOMAIN-SUFFIX,entra.microsoft.com
