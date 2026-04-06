@@ -188,5 +188,3 @@ payload:
   - DOMAIN-SUFFIX,youtube-nocookie.com
   - DOMAIN-SUFFIX,googlevisualization.com
 
-  # 4. 兜底
-  - GEOSITE,youtube
