@@ -43,6 +43,3 @@ payload:
   - DOMAIN-SUFFIX,perplexity.ai
   - DOMAIN-SUFFIX,sora.com
   - DOMAIN-SUFFIX,grok.com
-
-  #  兜底
-  - GEOSITE,openai
