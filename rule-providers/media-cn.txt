@@ -18,7 +18,6 @@ payload:
   - DOMAIN-SUFFIX,szbdyd.com         # 哔哩哔哩自建 CDN 节点域名（关键！）
   - DOMAIN-SUFFIX,mcdn.szbdyd.com    # 边缘计算节点
   - DOMAIN-SUFFIX,akamaized.net      # 虽是 Akamai，但 B 站国内加速常用，建议配合 policy
-  - GEOSITE,bilibili
 
   #  爱奇异
   - DOMAIN-SUFFIX,iqiyi.com
@@ -26,15 +25,11 @@ payload:
   - DOMAIN-SUFFIX,qiyi.com
   - DOMAIN-SUFFIX,qiyipic.com
   - DOMAIN-SUFFIX,71.am
-  - GEOSITE,iqiyi
 
   #  优酷 / 土豆
   - DOMAIN-SUFFIX,youku.com
   - DOMAIN-SUFFIX,ykimg.com
   - DOMAIN-SUFFIX,tudou.com
-  - GEOSITE,youku
-
- 
 
   # 酷狗音乐
   - DOMAIN-SUFFIX,kugou.com
@@ -42,14 +37,12 @@ payload:
   - DOMAIN,songsearch.kugou.com
   - DOMAIN,trackercdn.kugou.com
   - DOMAIN,mobilecdn.kugou.com
-  - GEOSITE,kugou
 
   # 酷我音乐
   - DOMAIN-SUFFIX,kuwo.cn
   - DOMAIN-SUFFIX,kuwo.com
   - DOMAIN,antiserver.kuwo.cn
   - DOMAIN,nmobi.kuwo.cn
-  - GEOSITE,kuwo
 
   # 腾讯视频 / WeTV
   # Tencent Video / WeTV
@@ -67,7 +60,6 @@ payload:
   - DOMAIN-SUFFIX,imgo.tv
 
   # AcFun
-  - GEOSITE,acfun
   - DOMAIN-SUFFIX,acfun.cn
   - DOMAIN-SUFFIX,acfun.com
   
