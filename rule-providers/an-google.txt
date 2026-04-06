@@ -446,6 +446,3 @@ payload:
 
   # Google extended ecosystem
   - DOMAIN,firebase.google.com
-
-  # 兜底
-  - GEOSITE,google
