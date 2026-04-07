@@ -121,8 +121,8 @@ dns:
 
   #  兜底 DNS
   fallback:
-    - https://1.1.1.1/dns-query
-    - https://8.8.4.4/dns-query
+    - https://1.1.1.1/dns-query#节点选择
+    - https://8.8.4.4/dns-query#节点选择
 
   #  兜底判断
   fallback-filter:
