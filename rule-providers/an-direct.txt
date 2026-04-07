@@ -10,6 +10,9 @@ payload:
   #  腾讯
   - DOMAIN-SUFFIX,wechat.com
 
+  #  百度
+  - DOMAIN-SUFFIX,baidu.com
+
   #  DIY
   - DOMAIN-SUFFIX,onejailbreak.com
   - DOMAIN-SUFFIX,gs.com
