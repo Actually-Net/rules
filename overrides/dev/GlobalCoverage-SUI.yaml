@@ -116,8 +116,8 @@ dns:
 
   #  解析节点链路域名
   proxy-server-nameserver:
-    - 223.5.5.5#DIRECT
-    - 1.12.12.12#DIRECT
+    - 223.5.5.5
+    - 1.12.12.12
 
   #  兜底 DNS
   fallback:
