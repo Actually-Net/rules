@@ -23,11 +23,51 @@
 7. 自定义`rule-providers`舍弃了一些第三方规则集，整合后统一管理，仅个人规则总数1K+出头（不包含第三方如Loyalsoldier），无需转换msr类型，可以但没必要。
 
 # 链接
-| 版本 | 种类 | 适用core | cdn链接 | raw链接 |
-| --- | --- | --- | --- | --- |
-| release | yaml | mihomo | [GlobalCoverage.yaml](https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/overrides/release/GlobalCoverage.yaml) | [GlobalCoverage.yaml](https://raw.githubusercontent.com/Actually-Net/rules/main/overrides/release/GlobalCoverage.yaml) |
-| release | json | sing-box | [GlobalCoverage.json](https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/overrides/release/GlobalCoverage.json) | [GlobalCoverage.json](https://raw.githubusercontent.com/Actually-Net/rules/main/overrides/release/GlobalCoverage.json) |
-| release | js | mihomo | [GlobalCoverage.js](https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/overrides/release/GlobalCoverage.js) | [GlobalCoverage.js](https://raw.githubusercontent.com/Actually-Net/rules/main/overrides/release/GlobalCoverage.js) |
-| dev | yaml | mihomo | [GlobalCoverage.yaml](https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/overrides/dev/GlobalCoverage.yaml) | [GlobalCoverage.yaml](https://raw.githubusercontent.com/Actually-Net/rules/main/overrides/dev/GlobalCoverage.yaml) |
-| dev | json | sing-box | [GlobalCoverage.json](https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/overrides/dev/GlobalCoverage.json) | [GlobalCoverage.json](https://raw.githubusercontent.com/Actually-Net/rules/main/overrides/dev/GlobalCoverage.json) |
-| dev | js | mihomo | [GlobalCoverage.js](https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/overrides/dev/GlobalCoverage.js) | [GlobalCoverage.js](https://raw.githubusercontent.com/Actually-Net/rules/main/overrides/dev/GlobalCoverage.js) |
+<table>
+  <thead>
+    <tr>
+      <th>适用core</th>
+      <th>种类</th>
+      <th>版本</th>
+      <th>cdn链接</th>
+      <th>raw链接</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="4">mihomo</td>
+      <td rowspan="2">yaml</td>
+      <td>release</td>
+      <td><a href="https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/overrides/release/GlobalCoverage.yaml">GlobalCoverage.yaml</a></td>
+      <td><a href="https://raw.githubusercontent.com/Actually-Net/rules/main/overrides/release/GlobalCoverage.yaml">GlobalCoverage.yaml</a></td>
+    </tr>
+    <tr>
+      <td>dev</td>
+      <td><a href="https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/overrides/dev/GlobalCoverage.yaml">GlobalCoverage.yaml</a></td>
+      <td><a href="https://raw.githubusercontent.com/Actually-Net/rules/main/overrides/dev/GlobalCoverage.yaml">GlobalCoverage.yaml</a></td>
+    </tr>
+    <tr>
+      <td rowspan="2">js</td>
+      <td>release</td>
+      <td><a href="https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/overrides/release/GlobalCoverage.js">GlobalCoverage.js</a></td>
+      <td><a href="https://raw.githubusercontent.com/Actually-Net/rules/main/overrides/release/GlobalCoverage.js">GlobalCoverage.js</a></td>
+    </tr>
+    <tr>
+      <td>dev</td>
+      <td><a href="https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/overrides/dev/GlobalCoverage.js">GlobalCoverage.js</a></td>
+      <td><a href="https://raw.githubusercontent.com/Actually-Net/rules/main/overrides/dev/GlobalCoverage.js">GlobalCoverage.js</a></td>
+    </tr>
+    <tr>
+      <td rowspan="2">sing-box</td>
+      <td rowspan="2">json</td>
+      <td>release</td>
+      <td><a href="https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/overrides/release/GlobalCoverage.json">GlobalCoverage.json</a></td>
+      <td><a href="https://raw.githubusercontent.com/Actually-Net/rules/main/overrides/release/GlobalCoverage.json">GlobalCoverage.json</a></td>
+    </tr>
+    <tr>
+      <td>dev</td>
+      <td><a href="https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/overrides/dev/GlobalCoverage.json">GlobalCoverage.json</a></td>
+      <td><a href="https://raw.githubusercontent.com/Actually-Net/rules/main/overrides/dev/GlobalCoverage.json">GlobalCoverage.json</a></td>
+    </tr>
+  </tbody>
+</table>
