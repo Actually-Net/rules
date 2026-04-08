@@ -10,7 +10,7 @@ allow-lan: false
 mode: rule
 log-level: info
 ipv6: false
-#  Web UI 配置 （移动端概率不可用）
+#  Web UI 配置 （移动端并非所有客户端都支持）
 external-controller: 127.0.0.1:9090
 secret: "809050203040"  #  密钥根据需求自己改
 external-ui: ui
@@ -47,8 +47,8 @@ tun:
   dns-hijack:
     - any:53
     - tcp://any:53
-    - "[::]:53"           # ← 新增，拦截 IPv6 DNS
-    - "tcp://[::]:53"     # ← 新增，拦截 IPv6 TCP DNS
+    - '[::]:53'           # ← 新增，拦截 IPv6 DNS
+    - 'tcp://[::]:53'     # ← 新增，拦截 IPv6 TCP DNS
 
 #  ============================================================================
 #  DNS 配置
@@ -79,6 +79,7 @@ dns:
     #  QQ 快速登录检测失败
     - 'localhost.ptlogin2.qq.com'
     - 'localhost.sec.qq.com'
+    - '+.mdt.qq.com'
     #  微信快速登录检测失败
     - 'localhost.work.weixin.qq.com'
     - 'weixin.qq.com'
@@ -98,8 +99,8 @@ dns:
 
   #  解析 DNS 服务器域名，仅ip，可加密
   default-nameserver:
-    - https://223.5.5.5/dns-query#DIRECT
-    - https://1.12.12.12/dns-query#DIRECT
+    - 223.5.5.5
+    - 119.29.29.29
 
   #  DNS 策略（最高优先级,优先于 nameserver/fallback 查询）
   nameserver-policy:
@@ -107,40 +108,16 @@ dns:
     'geosite:category-ads-all': 1.0.1.1#REJECT
     '+.gs.com': '192.168.20.201#DIRECT'
     '+.gamesci.com.cn': '192.168.20.201#DIRECT'
-    'geosite:private,cn,apple':
-      - https://223.5.5.5/dns-query#DIRECT
-      - https://1.12.12.12/dns-query#DIRECT
-    'geosite:gfw,geolocation-!cn':
-      - https://1.1.1.1/dns-query#节点选择
-      - https://8.8.4.4/dns-query#节点选择
     
   #  主要 DNS 服务器
   nameserver:
-    - https://223.5.5.5/dns-query#DIRECT
-    - https://1.12.12.12/dns-query#DIRECT
+    - https://223.5.5.5/dns-query
+    - https://1.12.12.12/dns-query
 
   #  解析节点链路域名
   proxy-server-nameserver:
-    - https://223.5.5.5/dns-query#DIRECT
-    - https://1.12.12.12/dns-query#DIRECT
-
-  #  兜底 DNS
-  fallback:
-    - https://1.1.1.1/dns-query#节点选择
-    - https://8.8.4.4/dns-query#节点选择
-
-  #  兜底判断
-  fallback-filter:
-    geoip: true
-    geoip-code: CN
-    geosite: 
-      - gfw
-    ipcidr:
-      - 240.0.0.0/4
-    domain:
-      - '+.google.com'
-      - '+.facebook.com'
-      - '+.youtube.com'
+    - 223.5.5.5
+    - 1.12.12.12
 
 
 #  ============================================================================
@@ -148,15 +125,13 @@ dns:
 #  ============================================================================
 sniffer:
   enable: true
-  #   处理没有域名的纯IP请求
-  parse-pure-ip: true
+  #   处理没有域名的纯IP请求(似乎没有什么用)
+  parse-pure-ip: false
   sniff:
     TLS:
       ports: [443, 8443]
-      override-destination: true
     HTTP:
       ports: [80, 8080-8880]
-      override-destination: true
   force-domain:
     - '+.googleapis.com'
     - '+.bilivideo.com'
@@ -188,7 +163,7 @@ proxy-groups:
     lazy: true
     max-failed-times: 3
     hidden: false
-    icon: https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/adjust.svg
+    icon: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/assets/icons/adjust.svg
 
   - name: 全局直连
     type: select
@@ -201,7 +176,7 @@ proxy-groups:
     lazy: true
     max-failed-times: 3
     hidden: false
-    icon: https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/link.svg
+    icon: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/assets/icons/link.svg
 
   - name: 广告过滤
     type: select
@@ -214,7 +189,7 @@ proxy-groups:
     lazy: true
     max-failed-times: 3
     hidden: false
-    icon: https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/bug.svg
+    icon: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/assets/icons/bug.svg
 
 
   #  ###################################################################
@@ -260,7 +235,7 @@ proxy-groups:
     lazy: true
     max-failed-times: 3
     hidden: false
-    icon: https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/chatgpt.svg
+    icon: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/assets/icons/chatgpt.svg
 
   - name: 谷歌服务
     type: select
@@ -273,7 +248,7 @@ proxy-groups:
     lazy: true
     max-failed-times: 3
     hidden: false
-    icon: https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/google.svg
+    icon: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/assets/icons/google.svg
 
   - name: 微软中国
     type: select
@@ -287,7 +262,7 @@ proxy-groups:
     lazy: true
     max-failed-times: 3
     hidden: false
-    icon: https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/microsoft.svg
+    icon: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/assets/icons/microsoft.svg
 
   - name: 微软国际
     type: select
@@ -315,7 +290,7 @@ proxy-groups:
     lazy: true
     max-failed-times: 3
     hidden: false
-    icon: https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/apple.svg
+    icon: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/assets/icons/apple.svg
 
   - name: Telegram
     type: select
@@ -328,7 +303,7 @@ proxy-groups:
     lazy: true
     max-failed-times: 3
     hidden: false
-    icon: https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/telegram.svg
+    icon: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/assets/icons/telegram.svg
 
   - name: BT
     type: select
@@ -359,7 +334,7 @@ proxy-groups:
     lazy: true
     max-failed-times: 3
     hidden: false
-    icon: https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/youtube.svg
+    icon: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/assets/icons/youtube.svg
 
   - name: Netflix
     type: select
@@ -372,7 +347,7 @@ proxy-groups:
     lazy: true
     max-failed-times: 3
     hidden: false
-    icon: https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/icon/netflix.svg
+    icon: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/assets/icons/netflix.svg
 
   - name: TikTok
     type: select
@@ -385,7 +360,7 @@ proxy-groups:
     lazy: true
     max-failed-times: 3
     hidden: false
-    icon: https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/icon/tiktok.svg
+    icon: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/assets/icons/tiktok.svg
 
   - name: 动画疯
     type: select
@@ -398,7 +373,7 @@ proxy-groups:
     lazy: true
     max-failed-times: 3
     hidden: false
-    icon: https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/icon/Bahamut.svg
+    icon: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/assets/icons/Bahamut.svg
 
   - name: 国内媒体
     type: select
@@ -426,20 +401,6 @@ proxy-groups:
     hidden: false
     icon: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/assets/icons/media-intl.svg
 
-  - name: Spotify
-    type: select
-    proxies:
-      - 节点选择
-    include-all: true
-    interval: 300
-    timeout: 3000
-    url: https://www.google.com/generate_204
-    lazy: true
-    max-failed-times: 3
-    hidden: false
-    icon: https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/icon/spotify.svg
-
-
   #  ###################################################################
   #  5、兜底组
   - name: 漏网之鱼
@@ -453,108 +414,132 @@ proxy-groups:
     lazy: true
     max-failed-times: 3
     hidden: false
-    icon: https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/fish.svg
+    icon: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/assets/icons/fish.svg
 
 
 #  ============================================================================
 #  规则集配置
 #  ============================================================================
 rule-providers:
-  #  Actually-Nat 规则集
+  #  Actually-Net 规则集
   game-cn:
     type: http
     behavior: classical
     format: yaml
-    url: https://raw.githubusercontent.com/Actually-Net/rules/main/rule-providers/game-cn.txt
-    path: ./ruleset/Actually-Nat/game-cn.yaml
+    url: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/game-cn.txt
+    path: ./ruleset/Actually-Net/game-cn.yaml
     interval: 86400
 
   game-intl:
     type: http
     behavior: classical
     format: yaml
-    url: https://raw.githubusercontent.com/Actually-Net/rules/main/rule-providers/game-intl.txt
-    path: ./ruleset/Actually-Nat/game-intl.yaml
+    url: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/game-intl.txt
+    path: ./ruleset/Actually-Net/game-intl.yaml
     interval: 86400
 
   an-reject:
     type: http
     behavior: classical
     format: yaml
-    url: https://raw.githubusercontent.com/Actually-Net/rules/main/rule-providers/an-reject.txt
-    path: ./ruleset/Actually-Nat/an-reject.yaml
+    url: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/an-reject.txt
+    path: ./ruleset/Actually-Net/an-reject.yaml
     interval: 86400
 
   an-direct:
     type: http
     behavior: classical
     format: yaml
-    url: https://raw.githubusercontent.com/Actually-Net/rules/main/rule-providers/an-direct.txt
-    path: ./ruleset/Actually-Nat/an-direct.yaml
+    url: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/an-direct.txt
+    path: ./ruleset/Actually-Net/an-direct.yaml
     interval: 86400
 
   an-proxy:
     type: http
     behavior: classical
     format: yaml
-    url: https://raw.githubusercontent.com/Actually-Net/rules/main/rule-providers/an-proxy.txt
-    path: ./ruleset/Actually-Nat/an-proxy.yaml
+    url: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/an-proxy.txt
+    path: ./ruleset/Actually-Net/an-proxy.yaml
     interval: 86400
 
   an-ai:
     type: http
     behavior: classical
     format: yaml
-    url: https://raw.githubusercontent.com/Actually-Net/rules/main/rule-providers/an-ai.txt
-    path: ./ruleset/Actually-Nat/an-ai.yaml
+    url: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/an-ai.txt
+    path: ./ruleset/Actually-Net/an-ai.yaml
+    interval: 86400
+
+  an-tiktok:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/an-tiktok.txt
+    path: ./ruleset/Actually-Net/an-tiktok.yaml
+    interval: 86400
+
+  an-netflix:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/an-netflix.txt
+    path: ./ruleset/Actually-Net/an-netflix.yaml
+    interval: 86400
+
+  an-bahamut:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/an-bahamut.txt
+    path: ./ruleset/Actually-Net/an-bahamut.yaml
     interval: 86400
 
   media-cn:
     type: http
     behavior: classical
     format: yaml
-    url: https://raw.githubusercontent.com/Actually-Net/rules/main/rule-providers/media-cn.txt
-    path: ./ruleset/Actually-Nat/media-cn.yaml
+    url: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/media-cn.txt
+    path: ./ruleset/Actually-Net/media-cn.yaml
     interval: 86400
 
   media-intl:
     type: http
     behavior: classical
     format: yaml
-    url: https://raw.githubusercontent.com/Actually-Net/rules/main/rule-providers/media-intl.txt
-    path: ./ruleset/Actually-Nat/media-intl.yaml
+    url: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/media-intl.txt
+    path: ./ruleset/Actually-Net/media-intl.yaml
     interval: 86400
 
   an-youtube:
     type: http
     behavior: classical
     format: yaml
-    url: https://raw.githubusercontent.com/Actually-Net/rules/main/rule-providers/an-youtube.txt
-    path: ./ruleset/Actually-Nat/an-youtube.yaml
+    url: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/an-youtube.txt
+    path: ./ruleset/Actually-Net/an-youtube.yaml
     interval: 86400
 
   an-google:
     type: http
     behavior: classical
     format: yaml
-    url: https://raw.githubusercontent.com/Actually-Net/rules/main/rule-providers/an-google.txt
-    path: ./ruleset/Actually-Nat/an-google.yaml
+    url: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/an-google.txt
+    path: ./ruleset/Actually-Net/an-google.yaml
     interval: 86400
 
   microsoft-cn:
     type: http
     behavior: classical
     format: yaml
-    url: https://raw.githubusercontent.com/Actually-Net/rules/main/rule-providers/microsoft-cn.txt
-    path: ./ruleset/Actually-Nat/microsoft-cn.yaml
+    url: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/microsoft-cn.txt
+    path: ./ruleset/Actually-Net/microsoft-cn.yaml
     interval: 86400
 
   microsoft-intl:
     type: http
     behavior: classical
     format: yaml
-    url: https://raw.githubusercontent.com/Actually-Net/rules/main/rule-providers/microsoft-intl.txt
-    path: ./ruleset/Actually-Nat/microsoft-intl.yaml
+    url: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/microsoft-intl.txt
+    path: ./ruleset/Actually-Net/microsoft-intl.yaml
     interval: 86400
 
   #  Loyalsoldier 规则集
@@ -654,38 +639,6 @@ rule-providers:
     path: ./ruleset/loyalsoldier/applications.yaml
     interval: 86400
 
-  #  xiaolin-007 规则集
-  bahamut:
-    type: http
-    behavior: classical
-    format: yaml
-    url: https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/rule/Bahamut.txt
-    path: ./ruleset/xiaolin-007/bahamut.yaml
-    interval: 86400
-
-  netflix:
-    type: http
-    behavior: classical
-    format: yaml
-    url: https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/rule/Netflix.txt
-    path: ./ruleset/xiaolin-007/netflix.yaml
-    interval: 86400
-
-  spotify:
-    type: http
-    behavior: classical
-    format: yaml
-    url: https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/rule/Spotify.txt
-    path: ./ruleset/xiaolin-007/spotify.yaml
-    interval: 86400
-
-  tiktok:
-    type: http
-    behavior: classical
-    format: yaml
-    url: https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/rule/TikTok.txt
-    path: ./ruleset/xiaolin-007/tiktok.yaml
-    interval: 86400
 
 #  ============================================================================
 #  分流规则
@@ -712,10 +665,9 @@ rules:
   #  5、精细化分流
   - RULE-SET,an-ai,AI
   - RULE-SET,an-youtube,YouTube
-  - RULE-SET,netflix,Netflix
-  - RULE-SET,tiktok,TikTok
-  - RULE-SET,spotify,Spotify
-  - RULE-SET,bahamut,动画疯
+  - RULE-SET,an-netflix,Netflix,no-resolve
+  - RULE-SET,an-tiktok,TikTok
+  - RULE-SET,an-bahamut,动画疯
   - RULE-SET,media-intl,海外媒体                 #  海外媒体 
   
   #  6、服务类

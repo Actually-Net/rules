@@ -1,0 +1,649 @@
+{
+  "log": {
+    "level": "info",
+    "timestamp": true
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "path": "cache.db"
+    },
+    "clash_api": {
+      "external_controller": "127.0.0.1:9090",
+      "external_ui": "ui",
+      "secret": "809050203040",
+      "default_mode": "rule"
+    }
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "dns-direct",
+        "type": "https",
+        "server": "223.5.5.5",
+        "path": "/dns-query",
+        "detour": "DIRECT"
+      },
+      {
+        "tag": "dns-tencent",
+        "type": "https",
+        "server": "1.12.12.12",
+        "path": "/dns-query",
+        "detour": "DIRECT"
+      },
+      {
+        "tag": "dns-local",
+        "type": "udp",
+        "server": "223.5.5.5",
+        "detour": "DIRECT"
+      },
+      {
+        "tag": "dns-proxy",
+        "type": "https",
+        "server": "1.1.1.1",
+        "path": "/dns-query",
+        "detour": "节点选择"
+      },
+      {
+        "tag": "dns-google",
+        "type": "https",
+        "server": "8.8.4.4",
+        "path": "/dns-query",
+        "detour": "节点选择"
+      },
+      {
+        "tag": "dns-fakeip",
+        "type": "fakeip",
+        "inet4_range": "198.18.0.1/16"
+      }
+    ],
+    "rules": [
+      {
+        "rule_set": [
+          "ls-reject",
+          "an-reject"
+        ],
+        "action": "reject"
+      },
+      {
+        "query_type": [
+          "AAAA"
+        ],
+        "action": "reject"
+      },
+      {
+        "domain": [
+          "localhost",
+          "weixin.qq.com"
+        ],
+        "server": "dns-direct"
+      },
+      {
+        "domain_suffix": [
+          ".lan",
+          ".local",
+          ".home.arpa",
+          ".msftconnecttest.com",
+          ".msftncsi.com",
+          "localhost.ptlogin2.qq.com",
+          "localhost.sec.qq.com",
+          "localhost.work.weixin.qq.com",
+          ".in-addr.arpa",
+          ".ip6.arpa",
+          "pool.ntp.org",
+          ".example.org",
+          ".gs.com",
+          ".gamesci.com.cn",
+          "time.windows.com",
+          "time.nist.gov",
+          "time.apple.com",
+          "time.google.com",
+          "srv.nintendo.net",
+          "mdt.qq.com"
+        ],
+        "server": "dns-direct"
+      },
+      {
+        "domain_keyword": [
+          "stun",
+          "time"
+        ],
+        "server": "dns-direct"
+      },
+      {
+        "rule_set": [
+          "ls-cn",
+          "an-direct",
+          "ls-private",
+          "ls-lan",
+          "ls-direct",
+          "game-cn",
+          "media-cn",
+          "microsoft-cn"
+        ],
+        "server": "dns-direct"
+      },
+      {
+        "rule_set": [
+          "ls-gfw",
+          "ls-proxy",
+          "an-proxy",
+          "an-ai",
+          "an-google"
+        ],
+        "server": "dns-proxy"
+      },
+      {
+        "query_type": [
+          "A",
+          "AAAA"
+        ],
+        "server": "dns-fakeip"
+      }
+    ],
+    "strategy": "ipv4_only",
+    "independent_cache": true
+  },
+  "inbounds": [
+    {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "0.0.0.0",
+      "listen_port": 7890
+    },
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "interface_name": "tun0",
+      "stack": "mixed",
+      "auto_route": true,
+      "strict_route": true,
+      "route_exclude_address": [
+        "10.0.0.0/8",
+        "127.0.0.0/8",
+        "172.16.0.0/12",
+        "192.168.0.0/16"
+      ]
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "urltest",
+      "tag": "自动选择",
+      "outbounds": [
+        "{all}"
+      ],
+      "url": "https://www.google.com/generate_204",
+      "interval": "5m",
+      "tolerance": 50
+    },
+    {
+      "type": "selector",
+      "tag": "节点选择",
+      "outbounds": [
+        "自动选择",
+        "{all}"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "全局直连",
+      "outbounds": [
+        "DIRECT",
+        "节点选择",
+        "{all}"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "漏网之鱼",
+      "outbounds": [
+        "节点选择"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "广告过滤",
+      "outbounds": [
+        "REJECT",
+        "DIRECT",
+        "节点选择"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "YouTube",
+      "outbounds": [
+        "节点选择"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "Netflix",
+      "outbounds": [
+        "节点选择"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "TikTok",
+      "outbounds": [
+        "节点选择"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "动画疯",
+      "outbounds": [
+        "节点选择"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "国内媒体",
+      "outbounds": [
+        "DIRECT",
+        "节点选择"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "海外媒体",
+      "outbounds": [
+        "节点选择"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "国内游戏",
+      "outbounds": [
+        "DIRECT",
+        "节点选择"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "国际游戏",
+      "outbounds": [
+        "节点选择",
+        "DIRECT"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "BT",
+      "outbounds": [
+        "DIRECT",
+        "节点选择",
+        "REJECT"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "AI",
+      "outbounds": [
+        "节点选择"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "谷歌服务",
+      "outbounds": [
+        "节点选择"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "微软中国",
+      "outbounds": [
+        "DIRECT",
+        "节点选择"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "微软国际",
+      "outbounds": [
+        "节点选择",
+        "DIRECT"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "苹果服务",
+      "outbounds": [
+        "DIRECT",
+        "节点选择"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "Telegram",
+      "outbounds": [
+        "节点选择"
+      ]
+    },
+    {
+      "type": "direct",
+      "tag": "DIRECT"
+    },
+    {
+      "type": "block",
+      "tag": "REJECT"
+    }
+  ],
+  "route": {
+    "default_domain_resolver": "dns-direct",
+    "rule_set": [
+      {
+        "tag": "an-ai",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/sing-box/srs/an-ai.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "an-bahamut",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/sing-box/srs/an-bahamut.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "an-direct",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/sing-box/srs/an-direct.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "an-google",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/sing-box/srs/an-google.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "an-netflix",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/sing-box/srs/an-netflix.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "an-proxy",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/sing-box/srs/an-proxy.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "an-reject",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/sing-box/srs/an-reject.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "an-tiktok",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/sing-box/srs/an-tiktok.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "an-youtube",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/sing-box/srs/an-youtube.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "game-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/sing-box/srs/game-cn.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "game-intl",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/sing-box/srs/game-intl.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "media-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/sing-box/srs/media-cn.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "media-intl",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/sing-box/srs/media-intl.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "microsoft-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/sing-box/srs/microsoft-cn.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "microsoft-intl",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/sing-box/srs/microsoft-intl.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "ls-reject",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/sing-box-rules@release/reject.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "ls-icloud",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/sing-box-rules@release/icloud.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "ls-apple",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/sing-box-rules@release/apple.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "ls-proxy",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/sing-box-rules@release/proxy.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "ls-direct",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/sing-box-rules@release/direct.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "ls-private",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/sing-box-rules@release/private.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "ls-gfw",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/sing-box-rules@release/gfw.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "ls-tld-not-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/sing-box-rules@release/tld-not-cn.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "ls-telegram",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/sing-box-rules@release/telegram.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "ls-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/sing-box-rules@release/cn.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "ls-lan",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/sing-box-rules@release/lan.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "ls-applications",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/sing-box-rules@release/applications.srs",
+        "download_detour": "DIRECT"
+      }
+    ],
+    "rules": [
+      {
+        "action": "sniff"
+      },
+      {
+        "protocol": "dns",
+        "action": "hijack-dns"
+      },
+      {
+        "rule_set": [
+          "ls-lan",
+          "ls-applications",
+          "ls-private"
+        ],
+        "outbound": "全局直连"
+      },
+      {
+        "rule_set": [
+          "ls-reject",
+          "an-reject"
+        ],
+        "outbound": "广告过滤"
+      },
+      {
+        "domain_keyword": [
+          "tracker",
+          "announce",
+          "torrent"
+        ],
+        "outbound": "BT"
+      },
+      {
+        "rule_set": "game-cn",
+        "outbound": "国内游戏"
+      },
+      {
+        "rule_set": "game-intl",
+        "outbound": "国际游戏"
+      },
+      {
+        "rule_set": "an-direct",
+        "outbound": "全局直连"
+      },
+      {
+        "rule_set": "an-proxy",
+        "outbound": "节点选择"
+      },
+      {
+        "rule_set": "media-cn",
+        "outbound": "国内媒体"
+      },
+      {
+        "rule_set": "an-ai",
+        "outbound": "AI"
+      },
+      {
+        "rule_set": "an-youtube",
+        "outbound": "YouTube"
+      },
+      {
+        "rule_set": "an-netflix",
+        "outbound": "Netflix"
+      },
+      {
+        "rule_set": "an-tiktok",
+        "outbound": "TikTok"
+      },
+      {
+        "rule_set": "an-bahamut",
+        "outbound": "动画疯"
+      },
+      {
+        "rule_set": "media-intl",
+        "outbound": "海外媒体"
+      },
+      {
+        "rule_set": "an-google",
+        "outbound": "谷歌服务"
+      },
+      {
+        "rule_set": "microsoft-intl",
+        "outbound": "微软国际"
+      },
+      {
+        "rule_set": "microsoft-cn",
+        "outbound": "微软中国"
+      },
+      {
+        "rule_set": [
+          "ls-icloud",
+          "ls-apple"
+        ],
+        "outbound": "苹果服务"
+      },
+      {
+        "rule_set": "ls-telegram",
+        "outbound": "Telegram"
+      },
+      {
+        "rule_set": [
+          "ls-gfw",
+          "ls-proxy",
+          "ls-tld-not-cn"
+        ],
+        "outbound": "节点选择"
+      },
+      {
+        "rule_set": [
+          "ls-direct",
+          "ls-cn"
+        ],
+        "outbound": "全局直连"
+      },
+      {
+        "ip_is_private": true,
+        "outbound": "全局直连"
+      }
+    ],
+    "final": "漏网之鱼",
+    "auto_detect_interface": true
+  }
+}
