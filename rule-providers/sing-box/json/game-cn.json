@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "domain_suffix": [
+        "wegame.com.cn",
+        "game.qq.com",
+        "wegame.gtimg.com",
+        "wegame.gtimg.com.cn",
+        "tgp.qq.com",
+        "tgp_game.qq.com",
+        "wegameplus.qq.com",
+        "wf.qq.com",
+        "anticheatexpert.com",
+        "steamusercontent.com",
+        "steamserver.net",
+        "cdn.steampowered.com",
+        "steamstatic.com",
+        "eccdnx.com",
+        "sycontroller.com",
+        "val.smogfly.com"
+      ],
+      "ip_cidr": [
+        "183.240.90.0/24"
+      ]
+    }
+  ]
+}

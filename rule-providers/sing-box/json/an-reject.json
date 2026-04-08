@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "domain_suffix": [
+        "flashtalking.com",
+        "adsymptotic.com",
+        "adroll.com",
+        "coin-hive.com",
+        "jsecoin.com",
+        "crypto-loot.com",
+        "miner.nicehash.com"
+      ]
+    }
+  ]
+}

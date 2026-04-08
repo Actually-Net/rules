@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "domain_suffix": [
+        "msauth.net",
+        "msauthimages.net",
+        "msftauth.net",
+        "msftauthimages.net",
+        "windows.com",
+        "windowsupdate.com",
+        "update.microsoft.com",
+        "delivery.mp.microsoft.com",
+        "wns.windows.com"
+      ],
+      "domain": [
+        "login.microsoftonline.com",
+        "login.microsoft.com",
+        "auth.gfx.ms",
+        "account.microsoft.com",
+        "dl.delivery.mp.microsoft.com",
+        "download.windowsupdate.com",
+        "ctldl.windowsupdate.com",
+        "ntservicepack.microsoft.com",
+        "go.microsoft.com",
+        "licensing.mp.microsoft.com",
+        "wscont.apps.microsoft.com",
+        "store-images.s-microsoft.com",
+        "officeclient.microsoft.com",
+        "officecdn.microsoft.com",
+        "officecdn-microsoft-com.akamaized.net",
+        "config.office.com"
+      ]
+    }
+  ]
+}

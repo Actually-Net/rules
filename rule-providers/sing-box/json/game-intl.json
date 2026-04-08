@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "domain_keyword": [
+        "diabloimmortal",
+        "epicgames",
+        "fortnite",
+        "riot",
+        "valorant",
+        "roblox",
+        "supercell"
+      ],
+      "domain_suffix": [
+        "steamcommunity.com",
+        "steampowered.com",
+        "store.steampowered.com",
+        "api.steampowered.com",
+        "steamcharts.com",
+        "steam-api.com",
+        "steam-chat.com",
+        "steam.apac.qtlglb.com",
+        "steam.cdn.on.net",
+        "steam.cdn.orcon.net.nz",
+        "steam.cdn.slingshot.co.nz",
+        "steam.cdn.webra.ru",
+        "steam.eca.qtlglb.com",
+        "steam.naeu.qtlglb.com",
+        "steam.ru.qtlglb.com",
+        "steam.tv",
+        "steamcontent.com",
+        "steamdb.info",
+        "steamdeck.com",
+        "steamgames.com",
+        "steaminventoryhelper.com",
+        "steamladder.com",
+        "steamofporn.com",
+        "steamunlocked.net",
+        "steamygamer.com",
+        "ea.com",
+        "battle.net",
+        "battlenet.com",
+        "blizzard.com",
+        "blzstatic.com",
+        "epicgames.com",
+        "fortnite.com",
+        "nintendo.com",
+        "playstation.com",
+        "xbox.com",
+        "riotgames.com",
+        "leagueoflegends.com",
+        "playvalorant.com",
+        "roblox.com",
+        "nintendo.com",
+        "nintendo.net",
+        "supercell.com"
+      ]
+    }
+  ]
+}

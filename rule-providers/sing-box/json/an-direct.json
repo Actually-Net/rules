@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "domain_suffix": [
+        "msftconnecttest.com",
+        "msftncsi.com",
+        "wpsmail.net",
+        "henzanapp.com",
+        "pconline.com.cn",
+        "wechat.com",
+        "baidu.com",
+        "onejailbreak.com",
+        "gs.com",
+        "gamesci.com.cn"
+      ],
+      "domain": [
+        "time.windows.com",
+        "policy.samsungcloud.com",
+        "play.samsungcloudcn.com"
+      ]
+    }
+  ]
+}

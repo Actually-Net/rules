@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "domain_suffix": [
+        "actually.vip",
+        "github.io",
+        "twitter",
+        "pixiv",
+        "github"
+      ],
+      "domain": [
+        "cloudflare-dns.com",
+        "dns.google",
+        "v2rayse.com"
+      ]
+    }
+  ]
+}
