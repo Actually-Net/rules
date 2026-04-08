@@ -111,18 +111,13 @@ dns:
     
   #  主要 DNS 服务器
   nameserver:
-    - https://223.5.5.5/dns-query#DIRECT
-    - https://1.12.12.12/dns-query#DIRECT
+    - https://223.5.5.5/dns-query
+    - https://1.12.12.12/dns-query
 
   #  解析节点链路域名
   proxy-server-nameserver:
     - 223.5.5.5
     - 1.12.12.12
-
-  #  兜底 DNS
-  fallback:
-    - https://1.1.1.1/dns-query#节点选择
-    - https://8.8.4.4/dns-query#节点选择
 
 
 #  ============================================================================
