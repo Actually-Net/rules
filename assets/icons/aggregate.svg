@@ -1,0 +1,30 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+    <!-- Outer Ring symbolizing Aggregation/Nexus -->
+    <circle cx="100" cy="100" r="85" fill="none" stroke="#1791E7" stroke-width="12" stroke-dasharray="25,15" />
+    
+    <!-- Central Node (Main Proxy) -->
+    <rect x="85" y="85" width="30" height="30" rx="6" fill="#1791E7" />
+    
+    <!-- 4 Concurrent Channels (Nodes A, B, C, D) -->
+    <!-- Top Left -->
+    <rect x="55" y="55" width="20" height="20" rx="4" fill="#82EBFE" />
+    <line x1="75" y1="75" x2="90" y2="90" stroke="#CED3D6" stroke-width="4" stroke-linecap="round" />
+    
+    <!-- Top Right -->
+    <rect x="125" y="55" width="20" height="20" rx="4" fill="#82EBFE" />
+    <line x1="125" y1="75" x2="110" y2="90" stroke="#CED3D6" stroke-width="4" stroke-linecap="round" />
+    
+    <!-- Bottom Left -->
+    <rect x="55" y="125" width="20" height="20" rx="4" fill="#82EBFE" />
+    <line x1="75" y1="125" x2="90" y2="110" stroke="#CED3D6" stroke-width="4" stroke-linecap="round" />
+    
+    <!-- Bottom Right -->
+    <rect x="125" y="125" width="20" height="20" rx="4" fill="#82EBFE" />
+    <line x1="125" y1="125" x2="110" y2="110" stroke="#CED3D6" stroke-width="4" stroke-linecap="round" />
+    
+    <!-- Speed/Flow Arrows indicating High Throughput -->
+    <path d="M90,40 L100,50 L110,40" fill="none" stroke="#1993E8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M160,90 L150,100 L160,110" fill="none" stroke="#1993E8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M90,160 L100,150 L110,160" fill="none" stroke="#1993E8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M40,90 L50,100 L40,110" fill="none" stroke="#1993E8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
