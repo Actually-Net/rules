@@ -32,6 +32,9 @@
   - DOMAIN-SUFFIX,val.smogfly.com
   - IP-CIDR,183.240.90.0/24,no-resolve
   - GEOSITE,steam@cn
+  
+  # 下载站
+  - DOMAIN-SUFFIX,dxdjyx.com
 
   # CN-GAME兜底
   - GEOSITE,category-games@cn
