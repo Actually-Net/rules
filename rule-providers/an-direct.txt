@@ -17,6 +17,10 @@ payload:
   - DOMAIN-SUFFIX,onejailbreak.com
   - DOMAIN-SUFFIX,gs.com
   - DOMAIN-SUFFIX,gamesci.com.cn
+  - DOMAIN-SUFFIX,dc6.bwg.net
+  - DOMAIN-SUFFIX,dc9.bwg.net
+  - DOMAIN-SUFFIX,jpos.bwg.net
+  - DOMAIN-SUFFIX,hk85.52bwg.com
 
   #  Samsung
   - DOMAIN,policy.samsungcloud.com
