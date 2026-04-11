@@ -1,8 +1,7 @@
 ﻿payload:
   # Squad / EOS process rules
-  # - 'PROCESS-NAME,EOSOverlayRenderer-Win64-Shipping.exe'
-  # - 'PROCESS-NAME,SquadGame.exe'
-  # - 'PROCESS-NAME,EasyAntiCheat_EOS.exe'
+  - 'PROCESS-NAME,SquadGame.exe'
+  - 'PROCESS-NAME,EasyAntiCheat_EOS.exe'
 
   # Wegame
   - PROCESS-NAME,wegame.exe
