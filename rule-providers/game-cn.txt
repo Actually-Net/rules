@@ -1,8 +1,4 @@
 ﻿payload:
-  # Squad / EOS process rules
-  - 'PROCESS-NAME,SquadGame.exe'
-  - 'PROCESS-NAME,EasyAntiCheat_EOS.exe'
-
   # Wegame
   - PROCESS-NAME,wegame.exe
   - PROCESS-NAME,browser.exe
