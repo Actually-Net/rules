@@ -156,6 +156,7 @@ proxy-groups:
   #  1、基础组
   - name: 节点选择
     type: select
+    proxies:
     include-all: true
     interval: 300
     timeout: 3000
@@ -309,7 +310,6 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT
-      - 节点选择
       - REJECT
     include-all: true
     interval: 300
@@ -379,7 +379,6 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT
-    #	 include-all: true
     interval: 300
     timeout: 3000
     url: https://www.google.com/generate_204
