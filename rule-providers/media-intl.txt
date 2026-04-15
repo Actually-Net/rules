@@ -4,6 +4,10 @@ payload:
   - DOMAIN-SUFFIX,olevod.com
   - DOMAIN-SUFFIX,ylsp.tv
 
+  #  海外漫画
+  - DOMAIN-SUFFIX,mangyaren.com
+  - DOMAIN-SUFFIX,happymh.com
+
   #  海外流媒体
   - DOMAIN-SUFFIX,bilibili.tv
   - DOMAIN-SUFFIX,bamgrid.com
