@@ -21,7 +21,8 @@ payload:
   - DOMAIN-SUFFIX,dc9.bwg.net
   - DOMAIN-SUFFIX,jpos.bwg.net
   - DOMAIN-SUFFIX,hk85.52bwg.com
-  - IP-CIDR,35.206.213.2/24,no-resolve
+  - DOMAIN-SUFFIX,actually.vip
+  - DOMAIN-SUFFIX,actually.chat
 
   #  Samsung
   - DOMAIN,policy.samsungcloud.com
