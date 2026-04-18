@@ -4,7 +4,6 @@ payload:
   - DOMAIN,dns.google
 
   # DIY
-  - DOMAIN-SUFFIX,actually.vip
   - DOMAIN,v2rayse.com
   - DOMAIN-SUFFIX,github.io
   - PROCESS-NAME,node.exe   # Node.js
