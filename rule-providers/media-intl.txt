@@ -3,6 +3,7 @@ payload:
   - DOMAIN-SUFFIX,xiaoheimi.cc
   - DOMAIN-SUFFIX,olevod.com
   - DOMAIN-SUFFIX,ylsp.tv
+  - DOMAIN-SUFFIX,xiaobaotv.com
 
   #  海外漫画
   - DOMAIN-SUFFIX,manhuaren.com
