@@ -105,7 +105,7 @@ dns:
   #  DNS 策略（最高优先级,优先于 nameserver/fallback 查询）
   nameserver-policy:
     #  拦截广告域名解析
-    'geosite:category-ads-all': 1.0.1.1#REJECT
+    'geosite:category-ads-all': rcode://success
     '+.gs.com': '192.168.20.201#DIRECT'
     '+.gamesci.com.cn': '192.168.20.201#DIRECT'
     
