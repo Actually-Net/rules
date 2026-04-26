@@ -30,6 +30,3 @@
   
   # 下载站
   - DOMAIN-SUFFIX,dxdjyx.com
-
-  # CN-GAME兜底
-  - GEOSITE,category-games@cn
