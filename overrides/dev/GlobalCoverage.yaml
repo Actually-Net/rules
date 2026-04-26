@@ -527,7 +527,7 @@ rule-providers:
 
   microsoft-cn:
     type: http
-    behavior: classical
+    behavior: domain
     format: yaml
     url: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/microsoft-cn.txt
     path: ./ruleset/Actually-Net/microsoft-cn.yaml
