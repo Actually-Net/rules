@@ -1,84 +1,84 @@
 payload:
   #  海外免费影视
-  - DOMAIN-SUFFIX,xiaoheimi.cc
-  - DOMAIN-SUFFIX,olevod.com
-  - DOMAIN-SUFFIX,ylsp.tv
-  - DOMAIN-SUFFIX,xiaobaotv.com
+  - '+.xiaoheimi.cc'
+  - '+.olevod.com'
+  - '+.ylsp.tv'
+  - '+.xiaobaotv.com'
 
   #  海外漫画
-  - DOMAIN-SUFFIX,manhuaren.com
-  - DOMAIN-SUFFIX,happymh.com
+  - '+.manhuaren.com'
+  - '+.happymh.com'
 
   #  海外流媒体
-  - DOMAIN-SUFFIX,bilibili.tv
-  - DOMAIN-SUFFIX,bamgrid.com
-  - DOMAIN-SUFFIX,dssott.com
-  - DOMAIN-SUFFIX,twitch.tv
-  - DOMAIN-SUFFIX,twitchcdn.net
-  - DOMAIN-SUFFIX,ttvnw.net
-  - DOMAIN-SUFFIX,jtvnw.net
-  - DOMAIN-SUFFIX,musical.ly
-  - DOMAIN-SUFFIX,ibyteimg.com
-  - DOMAIN-SUFFIX,pstatp.com
-  - DOMAIN-SUFFIX,crunchyroll.com
-  - DOMAIN-SUFFIX,vrv.co
-  - DOMAIN-SUFFIX,funimation.com
-  - DOMAIN-SUFFIX,primevideo.com
-  - DOMAIN-SUFFIX,amazonvideo.com
-  - DOMAIN-SUFFIX,aiv-cdn.net
-  - DOMAIN-SUFFIX,aiv-delivery.net
-  - DOMAIN-SUFFIX,media-amazon.com
-  - DOMAIN-SUFFIX,pbs.org
-  - DOMAIN-SUFFIX,dazn.com
-  - DOMAIN-SUFFIX,biliintl.com
-  - DOMAIN-SUFFIX,pixiv.net
-  - DOMAIN-SUFFIX,pximg.net
-  - DOMAIN-SUFFIX,fanbox.cc
-  - DOMAIN-SUFFIX,e-hentai.org
-  - DOMAIN-SUFFIX,exhentai.org
-  - DOMAIN-SUFFIX,ehgt.org
-  - DOMAIN-SUFFIX,hath.network
-  - DOMAIN-SUFFIX,pandora.com
-  - DOMAIN-SUFFIX,soundcloud.com
-  - DOMAIN-SUFFIX,sndcdn.com
-  - DOMAIN-SUFFIX,vimeo.com
-  - DOMAIN-SUFFIX,vimeocdn.com
+  - '+.bilibili.tv'
+  - '+.bamgrid.com'
+  - '+.dssott.com'
+  - '+.twitch.tv'
+  - '+.twitchcdn.net'
+  - '+.ttvnw.net'
+  - '+.jtvnw.net'
+  - '+.musical.ly'
+  - '+.ibyteimg.com'
+  - '+.pstatp.com'
+  - '+.crunchyroll.com'
+  - '+.vrv.co'
+  - '+.funimation.com'
+  - '+.primevideo.com'
+  - '+.amazonvideo.com'
+  - '+.aiv-cdn.net'
+  - '+.aiv-delivery.net'
+  - '+.media-amazon.com'
+  - '+.pbs.org'
+  - '+.dazn.com'
+  - '+.biliintl.com'
+  - '+.pixiv.net'
+  - '+.pximg.net'
+  - '+.fanbox.cc'
+  - '+.e-hentai.org'
+  - '+.exhentai.org'
+  - '+.ehgt.org'
+  - '+.hath.network'
+  - '+.pandora.com'
+  - '+.soundcloud.com'
+  - '+.sndcdn.com'
+  - '+.vimeo.com'
+  - '+.vimeocdn.com'
 
   #  Disney+ 串流
-  - DOMAIN-KEYWORD,disneyplus
-  - DOMAIN-SUFFIX,disneystreaming.com
-  - DOMAIN-SUFFIX,disneyplus.com
-  - DOMAIN-SUFFIX,disney-plus.net
-  - DOMAIN-SUFFIX,disney.com
+  - '+.disneyplus' # Was DOMAIN-KEYWORD
+  - '+.disneystreaming.com'
+  - '+.disneyplus.com'
+  - '+.disney-plus.net'
+  - '+.disney.com'
 
   #  Spotify
-  - DOMAIN-KEYWORD,-spotify-
-  - DOMAIN-KEYWORD,spotify.com
-  - DOMAIN-SUFFIX,pscdn.co
-  - DOMAIN-SUFFIX,scdn.co
-  - DOMAIN-SUFFIX,spoti.fi
-  - DOMAIN-SUFFIX,spotify.com
-  - DOMAIN-SUFFIX,spotifycdn.com
-  - DOMAIN-SUFFIX,spotifycdn.net
+  - '+.-spotify-' # Was DOMAIN-KEYWORD
+  - '+.spotify.com' # Was DOMAIN-KEYWORD
+  - '+.pscdn.co'
+  - '+.scdn.co'
+  - '+.spoti.fi'
+  - '+.spotify.com'
+  - '+.spotifycdn.com'
+  - '+.spotifycdn.net'
 
   #  Hulu 频道
-  - DOMAIN-KEYWORD,hulu
-  - DOMAIN-SUFFIX,hulu.com
-  - DOMAIN-SUFFIX,huluim.com
-  - DOMAIN-SUFFIX,hulustream.com
+  - '+.hulu' # Was DOMAIN-KEYWORD
+  - '+.hulu.com'
+  - '+.huluim.com'
+  - '+.hulustream.com'
   
   #  HBO 频道
-  - DOMAIN-SUFFIX,hbomax.com
-  - DOMAIN-SUFFIX,hbo.com
-  - DOMAIN-SUFFIX,max.com
-  - DOMAIN-SUFFIX,hbogo.com
-  - DOMAIN-SUFFIX,hbonow.com
+  - '+.hbomax.com'
+  - '+.hbo.com'
+  - '+.max.com'
+  - '+.hbogo.com'
+  - '+.hbonow.com'
   
   #  Twitch 直播星
-  - DOMAIN-SUFFIX,twitch.tv
+  - '+.twitch.tv'
 
   #  e-Hentai 高清二次元禁限漫库
-  - DOMAIN-SUFFIX,ehentai.org
+  - '+.ehentai.org'
 
   #  Pixiv 全球插画专站
-  - DOMAIN-SUFFIX,pixiv.net
+  - '+.pixiv.net'
