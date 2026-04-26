@@ -8,7 +8,7 @@
 mixed-port: 7890
 allow-lan: false
 mode: rule
-log-level: info
+log-level: warning
 ipv6: false
 #  Web UI 配置 （移动端并非所有客户端都支持）
 external-controller: 127.0.0.1:9090
@@ -70,7 +70,6 @@ dns:
     - 'localhost'
     - '+.lan'
     - '+.local'
-    - '*.localhost'
     - '*.localdomain'
     - '*.home.arpa'
     #  Windows 网络探测
@@ -89,7 +88,6 @@ dns:
     - 'time.*.com'
     - 'time.*.gov'
     - 'pool.ntp.org'
-    - '+.example.org'
     #  部分内网预留
     - '+.gs.com'
     - '+.gamesci.com.cn'
@@ -125,8 +123,8 @@ dns:
 #  ============================================================================
 sniffer:
   enable: true
-  #   处理没有域名的纯IP请求(似乎没有什么用)
-  parse-pure-ip: false
+  #   处理没有域名的纯IP请求
+  parse-pure-ip: true
   sniff:
     TLS:
       ports: [443, 8443]
@@ -139,15 +137,18 @@ sniffer:
     - '+.hdslb.com'
     - '+.apple.com'
     - '+.icloud.com'
+    - '+.cdn-apple.com'
+    - '+.akamaized.net'
     - '+.microsoft.com'
   skip-domain:
-    - 'Mijia Cloud'
-    - 'dlg.io.mi.com'
+    - '+.mi.com'
     - '+.local'
     - '+.lan'
     - '+.push.apple.com'
+    - '+.gs-server.microsoft.com'
     - '+.gs.com'
     - '+.gamesci.com.cn'
+    - '+.steamcontent.com'
 
 #  ============================================================================
 #  代理组配置
@@ -156,7 +157,6 @@ proxy-groups:
   #  1、基础组
   - name: 节点选择
     type: select
-    proxies:
     include-all: true
     interval: 300
     timeout: 3000
@@ -463,7 +463,7 @@ rule-providers:
 
   an-ai:
     type: http
-    behavior: classical
+    behavior: domain
     format: yaml
     url: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/an-ai.txt
     path: ./ruleset/Actually-Net/an-ai.yaml
@@ -471,7 +471,7 @@ rule-providers:
 
   an-tiktok:
     type: http
-    behavior: classical
+    behavior: domain
     format: yaml
     url: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/an-tiktok.txt
     path: ./ruleset/Actually-Net/an-tiktok.yaml
@@ -487,7 +487,7 @@ rule-providers:
 
   an-bahamut:
     type: http
-    behavior: classical
+    behavior: domain
     format: yaml
     url: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/an-bahamut.txt
     path: ./ruleset/Actually-Net/an-bahamut.yaml
@@ -495,7 +495,7 @@ rule-providers:
 
   media-cn:
     type: http
-    behavior: classical
+    behavior: domain
     format: yaml
     url: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/media-cn.txt
     path: ./ruleset/Actually-Net/media-cn.yaml
@@ -503,7 +503,7 @@ rule-providers:
 
   media-intl:
     type: http
-    behavior: classical
+    behavior: domain
     format: yaml
     url: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/media-intl.txt
     path: ./ruleset/Actually-Net/media-intl.yaml
@@ -511,7 +511,7 @@ rule-providers:
 
   an-youtube:
     type: http
-    behavior: classical
+    behavior: domain
     format: yaml
     url: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/an-youtube.txt
     path: ./ruleset/Actually-Net/an-youtube.yaml
@@ -519,7 +519,7 @@ rule-providers:
 
   an-google:
     type: http
-    behavior: classical
+    behavior: domain
     format: yaml
     url: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/an-google.txt
     path: ./ruleset/Actually-Net/an-google.yaml
@@ -535,7 +535,7 @@ rule-providers:
 
   microsoft-intl:
     type: http
-    behavior: classical
+    behavior: domain
     format: yaml
     url: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/microsoft-intl.txt
     path: ./ruleset/Actually-Net/microsoft-intl.yaml
