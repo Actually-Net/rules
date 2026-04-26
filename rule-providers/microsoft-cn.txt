@@ -1,31 +1,31 @@
 payload:
   #  Microsoft Core Infrastructure (Direct for Activation & Auth)
-  - DOMAIN,login.microsoftonline.com
-  - DOMAIN,login.microsoft.com
-  - DOMAIN,auth.gfx.ms
-  - DOMAIN,account.microsoft.com
-  - DOMAIN-SUFFIX,msauth.net
-  - DOMAIN-SUFFIX,msauthimages.net
-  - DOMAIN-SUFFIX,msftauth.net
-  - DOMAIN-SUFFIX,msftauthimages.net
+  - 'login.microsoftonline.com'
+  - 'login.microsoft.com'
+  - 'auth.gfx.ms'
+  - 'account.microsoft.com'
+  - '+.msauth.net'
+  - '+.msauthimages.net'
+  - '+.msftauth.net'
+  - '+.msftauthimages.net'
 
   #  Windows & Store (Direct for CDN/Updates)
-  - DOMAIN-SUFFIX,windows.com
-  - DOMAIN-SUFFIX,windowsupdate.com
-  - DOMAIN-SUFFIX,update.microsoft.com
-  - DOMAIN-SUFFIX,delivery.mp.microsoft.com
-  - DOMAIN,dl.delivery.mp.microsoft.com
-  - DOMAIN,download.windowsupdate.com
-  - DOMAIN,ctldl.windowsupdate.com
-  - DOMAIN,ntservicepack.microsoft.com
-  - DOMAIN,go.microsoft.com
-  - DOMAIN,licensing.mp.microsoft.com
-  - DOMAIN-SUFFIX,wns.windows.com
-  - DOMAIN,wscont.apps.microsoft.com
-  - DOMAIN,store-images.s-microsoft.com
+  - '+.windows.com'
+  - '+.windowsupdate.com'
+  - '+.update.microsoft.com'
+  - '+.delivery.mp.microsoft.com'
+  - 'dl.delivery.mp.microsoft.com'
+  - 'download.windowsupdate.com'
+  - 'ctldl.windowsupdate.com'
+  - 'ntservicepack.microsoft.com'
+  - 'go.microsoft.com'
+  - 'licensing.mp.microsoft.com'
+  - '+.wns.windows.com'
+  - 'wscont.apps.microsoft.com'
+  - 'store-images.s-microsoft.com'
 
   #  Microsoft / Office CDN (Direct for Installation)
-  - DOMAIN,officeclient.microsoft.com
-  - DOMAIN,officecdn.microsoft.com
-  - DOMAIN,officecdn-microsoft-com.akamaized.net
-  - DOMAIN,config.office.com
+  - 'officeclient.microsoft.com'
+  - 'officecdn.microsoft.com'
+  - 'officecdn-microsoft-com.akamaized.net'
+  - 'config.office.com'
