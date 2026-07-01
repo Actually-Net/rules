@@ -23,6 +23,8 @@ payload:
   - DOMAIN-SUFFIX,hk85.52bwg.com
   - DOMAIN-SUFFIX,actually.vip
   - DOMAIN-SUFFIX,actually.chat
+  - DOMAIN-SUFFIX,weike.fm
+  - DOMAIN-SUFFIX,goweike.cn
 
   #  Samsung
   - DOMAIN,policy.samsungcloud.com
