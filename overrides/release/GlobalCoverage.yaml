@@ -93,6 +93,8 @@ dns:
     #  部分内网预留
     - '+.gs.com'
     - '+.gamesci.com.cn'
+    - '+.weike.fm'
+    - '+.goweike.cn'
     #  STUN / 游戏机 / 语音通话
     - 'stun.*'
     - 'srv.nintendo.net'
@@ -108,8 +110,6 @@ dns:
     'geosite:category-ads-all': 1.0.1.1#REJECT
     '+.gs.com': '192.168.20.201#DIRECT'
     '+.gamesci.com.cn': '192.168.20.201#DIRECT'
-    '+.weike.fm': '119.29.29.29#DIRECT'
-    '+.goweike.cn': '119.29.29.29#DIRECT'
 
   #  主要 DNS 服务器
   nameserver:
