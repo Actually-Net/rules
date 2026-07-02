@@ -108,7 +108,9 @@ dns:
     'geosite:category-ads-all': 1.0.1.1#REJECT
     '+.gs.com': '192.168.20.201#DIRECT'
     '+.gamesci.com.cn': '192.168.20.201#DIRECT'
-    
+    '+.weike.fm': '119.29.29.29#DIRECT'
+    '+.goweike.cn': '119.29.29.29#DIRECT'
+
   #  主要 DNS 服务器
   nameserver:
     - https://223.5.5.5/dns-query
