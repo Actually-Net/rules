@@ -8,7 +8,7 @@
 mixed-port: 7890
 allow-lan: false
 mode: rule
-log-level: warning
+log-level: info
 ipv6: false
 #  Web UI 配置 （移动端并非所有客户端都支持）
 external-controller: 127.0.0.1:9090
@@ -70,6 +70,7 @@ dns:
     - 'localhost'
     - '+.lan'
     - '+.local'
+    - '*.localhost'
     - '*.localdomain'
     - '*.home.arpa'
     #  Windows 网络探测
@@ -88,9 +89,12 @@ dns:
     - 'time.*.com'
     - 'time.*.gov'
     - 'pool.ntp.org'
+    - '+.example.org'
     #  部分内网预留
     - '+.gs.com'
     - '+.gamesci.com.cn'
+    - '+.weike.fm'
+    - '+.goweike.cn'
     #  STUN / 游戏机 / 语音通话
     - 'stun.*'
     - 'srv.nintendo.net'
@@ -103,10 +107,11 @@ dns:
   #  DNS 策略（最高优先级,优先于 nameserver/fallback 查询）
   nameserver-policy:
     #  拦截广告域名解析
-    'geosite:category-ads-all': rcode://success
+    'geosite:category-ads-all': 1.0.1.1#REJECT
     '+.gs.com': '192.168.20.201#DIRECT'
     '+.gamesci.com.cn': '192.168.20.201#DIRECT'
-    
+    '+.goweike.cn': '119.29.29.29#DIRECT'
+
   #  主要 DNS 服务器
   nameserver:
     - https://223.5.5.5/dns-query
@@ -123,8 +128,8 @@ dns:
 #  ============================================================================
 sniffer:
   enable: true
-  #   处理没有域名的纯IP请求
-  parse-pure-ip: true
+  #   处理没有域名的纯IP请求(似乎没有什么用)
+  parse-pure-ip: false
   sniff:
     TLS:
       ports: [443, 8443]
@@ -137,18 +142,15 @@ sniffer:
     - '+.hdslb.com'
     - '+.apple.com'
     - '+.icloud.com'
-    - '+.cdn-apple.com'
-    - '+.akamaized.net'
     - '+.microsoft.com'
   skip-domain:
-    - '+.mi.com'
+    - 'Mijia Cloud'
+    - 'dlg.io.mi.com'
     - '+.local'
     - '+.lan'
     - '+.push.apple.com'
-    - '+.gs-server.microsoft.com'
     - '+.gs.com'
     - '+.gamesci.com.cn'
-    - '+.steamcontent.com'
 
 #  ============================================================================
 #  代理组配置
@@ -310,6 +312,7 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT
+      - 节点选择
       - REJECT
     include-all: true
     interval: 300
@@ -379,6 +382,7 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT
+    #	 include-all: true
     interval: 300
     timeout: 3000
     url: https://www.google.com/generate_204
@@ -463,7 +467,7 @@ rule-providers:
 
   an-ai:
     type: http
-    behavior: domain
+    behavior: classical
     format: yaml
     url: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/an-ai.txt
     path: ./ruleset/Actually-Net/an-ai.yaml
@@ -471,7 +475,7 @@ rule-providers:
 
   an-tiktok:
     type: http
-    behavior: domain
+    behavior: classical
     format: yaml
     url: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/an-tiktok.txt
     path: ./ruleset/Actually-Net/an-tiktok.yaml
@@ -487,7 +491,7 @@ rule-providers:
 
   an-bahamut:
     type: http
-    behavior: domain
+    behavior: classical
     format: yaml
     url: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/an-bahamut.txt
     path: ./ruleset/Actually-Net/an-bahamut.yaml
@@ -495,7 +499,7 @@ rule-providers:
 
   media-cn:
     type: http
-    behavior: domain
+    behavior: classical
     format: yaml
     url: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/media-cn.txt
     path: ./ruleset/Actually-Net/media-cn.yaml
@@ -503,7 +507,7 @@ rule-providers:
 
   media-intl:
     type: http
-    behavior: domain
+    behavior: classical
     format: yaml
     url: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/media-intl.txt
     path: ./ruleset/Actually-Net/media-intl.yaml
@@ -511,7 +515,7 @@ rule-providers:
 
   an-youtube:
     type: http
-    behavior: domain
+    behavior: classical
     format: yaml
     url: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/an-youtube.txt
     path: ./ruleset/Actually-Net/an-youtube.yaml
@@ -519,7 +523,7 @@ rule-providers:
 
   an-google:
     type: http
-    behavior: domain
+    behavior: classical
     format: yaml
     url: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/an-google.txt
     path: ./ruleset/Actually-Net/an-google.yaml
@@ -527,7 +531,7 @@ rule-providers:
 
   microsoft-cn:
     type: http
-    behavior: domain
+    behavior: classical
     format: yaml
     url: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/microsoft-cn.txt
     path: ./ruleset/Actually-Net/microsoft-cn.yaml
@@ -535,7 +539,7 @@ rule-providers:
 
   microsoft-intl:
     type: http
-    behavior: domain
+    behavior: classical
     format: yaml
     url: https://fastly.jsdelivr.net/gh/Actually-Net/rules@main/rule-providers/microsoft-intl.txt
     path: ./ruleset/Actually-Net/microsoft-intl.yaml
