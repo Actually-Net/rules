@@ -25,6 +25,7 @@ payload:
   - DOMAIN-SUFFIX,actually.chat
   - DOMAIN-SUFFIX,weike.fm
   - DOMAIN-SUFFIX,goweike.cn
+  - DOMAIN-SUFFIX,sobot.com
 
   #  Samsung
   - DOMAIN,policy.samsungcloud.com
