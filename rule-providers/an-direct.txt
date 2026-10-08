@@ -26,7 +26,3 @@ payload:
   - DOMAIN-SUFFIX,weike.fm
   - DOMAIN-SUFFIX,goweike.cn
   - DOMAIN-SUFFIX,sobot.com
-
-  #  Samsung
-  - DOMAIN,policy.samsungcloud.com
-  - DOMAIN,play.samsungcloudcn.com
