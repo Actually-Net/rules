@@ -7,6 +7,7 @@ payload:
   - DOMAIN,v2rayse.com
   - DOMAIN-SUFFIX,github.io
   - PROCESS-NAME,node.exe   # Node.js
+  - DOMAIN-SUFFIX,samsung   # 三星服务
   
   # 海外大站
   - DOMAIN-SUFFIX,twitter
