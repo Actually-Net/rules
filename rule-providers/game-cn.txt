@@ -30,6 +30,7 @@
   
   # 下载站
   - DOMAIN-SUFFIX,dxdjyx.com
+  - DOMAIN-SUFFIX,steambk.com
 
   # DIY
   - PROCESS-NAME,SquadGame-Win64-Shipping.exe
