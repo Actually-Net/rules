@@ -6,7 +6,7 @@
 #  基础配置（部分可选，端口、日志、tun等内容可注释后使用面板自带）
 #  ============================================================================
 mixed-port: 7890
-allow-lan: false
+allow-lan: true
 mode: rule
 log-level: info
 ipv6: false
