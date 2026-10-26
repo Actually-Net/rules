@@ -8,6 +8,8 @@ payload:
   - DOMAIN-SUFFIX,github.io
   - PROCESS-NAME,node.exe   # Node.js
   - DOMAIN-SUFFIX,samsung   # 三星服务
+  - DOMAIN-SUFFIX,actually.vip
+  - DOMAIN-SUFFIX,actually.chat
   
   # 海外大站
   - DOMAIN-SUFFIX,twitter
