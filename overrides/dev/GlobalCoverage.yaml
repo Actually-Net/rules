@@ -104,7 +104,7 @@ dns:
   #  解析 DNS 服务器域名，仅ip，可加密
   default-nameserver:
     - 223.5.5.5
-    - 119.29.29.29
+    - 1.12.12.12
 
   #  DNS 策略（最高优先级,优先于 nameserver/fallback 查询）
   nameserver-policy:
@@ -125,7 +125,7 @@ dns:
   #  直连DNS
   direct-nameserver:
     - 223.5.5.5
-    - 119.29.29.29
+    - 1.12.12.12
 
   #  解析节点链路域名
   proxy-server-nameserver:
