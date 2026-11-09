@@ -13,3 +13,5 @@ payload:
   - DOMAIN-SUFFIX,twitter
   - DOMAIN-SUFFIX,pixiv
   - DOMAIN-SUFFIX,github
+  - DOMAIN-SUFFIX,actually.vip
+  - DOMAIN-SUFFIX,actually.chat
