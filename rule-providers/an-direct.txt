@@ -24,5 +24,3 @@ payload:
   - DOMAIN-SUFFIX,weike.fm
   - DOMAIN-SUFFIX,goweike.cn
   - DOMAIN-SUFFIX,sobot.com
-  - DOMAIN-SUFFIX,actually.vip
-  - DOMAIN-SUFFIX,actually.chat
